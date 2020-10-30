@@ -22,7 +22,7 @@ export const ContactMe: React.FC = () => {
           </Box>
         </Grid>
         <Grid item xs={8}>
-          <ContactForm />
+          <ContactForm messageRows={9} />
         </Grid>
       </Grid>
     </Box>

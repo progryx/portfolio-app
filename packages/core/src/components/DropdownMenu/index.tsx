@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, ButtonProps, Menu, MenuItem } from '@material-ui/core';
+import { Box, Button, ButtonProps, Menu, MenuItem as MatUiMenuItem } from '@material-ui/core';
 
 export type MenuItem = {
   description: string;
@@ -55,9 +55,9 @@ export const DropdownMenu: React.FC<Props> = ({
       >
         {items.map(({ description, handleClickItem }, index) => {
           return (
-            <MenuItem key={index} onClick={handleClickItem}>
+            <MatUiMenuItem key={index} onClick={handleClickItem}>
               {description}
-            </MenuItem>
+            </MatUiMenuItem>
           );
         })}
       </Menu>
