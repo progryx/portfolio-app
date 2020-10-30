@@ -1,0 +1,3 @@
+{
+  "./DashboardPage": "./exposes/DashboardPage.ts"
+}

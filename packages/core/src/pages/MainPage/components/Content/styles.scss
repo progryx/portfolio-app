@@ -1,0 +1,9 @@
+@import '~@portfolio-app/styles-lib/src/mixins/font-mixins';
+@import '~@portfolio-app/styles-lib/src/properties/sizes';
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+#headingTitle {
+  @include baseFontProps($font_xl, 500, 1);
+  padding-top: $space_l;
+  padding-left: $space_m;
+}

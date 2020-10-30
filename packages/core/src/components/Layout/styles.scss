@@ -1,0 +1,18 @@
+@import '~@portfolio-app/styles-lib/src/mixins/font-mixins';
+@import '~@portfolio-app/styles-lib/src/properties/sizes';
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+.gridLayout {
+  margin-top: 10px;
+
+  &__container {
+    min-height: 100%;
+    padding-top: $base * 20;
+  }
+}
+
+.NavBar {
+  &__tabItem {
+    @include baseFontProps($font_s, 400, 1);
+  }
+}

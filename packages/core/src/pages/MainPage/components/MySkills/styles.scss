@@ -1,0 +1,32 @@
+@import '~@portfolio-app/styles-lib/src/mixins/font-mixins';
+@import '~@portfolio-app/styles-lib/src/properties/sizes';
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+.mySkills {
+  &__skillHeader {
+    display: block;
+
+    @include baseFontProps($font_m, 500, 1);
+    margin-bottom: $space_s;
+  }
+
+  &__skillSubHeader {
+    display: block;
+
+    @include baseFontProps($font_m, 400, 1);
+    margin-top: $space_m;
+    margin-left: $space_m;
+  }
+
+  &__skillIcon {
+    font-size: $base * 11;
+  }
+
+  &__skillBox {
+    width: 100%;
+  }
+}
+
+#divider {
+  margin: $space_xl;
+}

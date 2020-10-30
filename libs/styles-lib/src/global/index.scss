@@ -1,0 +1,15 @@
+@import "../colors/main.scss";
+@import "../properties/sizes.scss";
+
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+body {
+  color: $main_color;
+  font-family: Roboto;
+
+  @include baseFontProps($font_m, 400, 1);
+}

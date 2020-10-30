@@ -1,0 +1,13 @@
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+.contactLink {
+  &__contact {
+    display: flex;
+
+    align-items: center;
+  }
+
+  &__contactIcon {
+    margin-right: $space_2xs;
+  }
+}
