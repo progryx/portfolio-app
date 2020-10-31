@@ -1,8 +1,20 @@
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-import { Box, Button, FormControl, Grid, Typography, TypographyTypeMap } from '@material-ui/core';
-import { GOOGLE_API_KEY } from '@src/constants';
+import { EN_LOCALE } from '@locales/en';
+import { RU_LOCALE } from '@locales/ru';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  FormControl,
+  Grid,
+  Typography,
+  TypographyTypeMap,
+} from '@material-ui/core';
+import { coreActions, coreSelectors } from '@reducers/core';
+import { EMAIL_JS, GOOGLE_API_KEY } from '@src/constants';
+import { useDispatch, useSelector } from '@src/store';
 import { GetFormKeys, validation } from '@src/utilities';
 import cn from 'classnames';
 import emailjs from 'emailjs-com';
@@ -39,7 +51,8 @@ const initialFormValues: ContactFormFields = {
 const FormControls: React.FC<{
   capchaCheckHandler: () => void;
   isDisabledSubmit: boolean;
-}> = ({ capchaCheckHandler, isDisabledSubmit }) => {
+  isLoading: boolean;
+}> = ({ capchaCheckHandler, isDisabledSubmit, isLoading }) => {
   return (
     <Grid container xs={12}>
       <Grid item>
@@ -51,10 +64,11 @@ const FormControls: React.FC<{
         <Box ml={1}>
           <Button
             variant="contained"
+            startIcon={isLoading && <CircularProgress color="secondary" size={24} />}
             type="submit"
             color="primary"
             size="large"
-            disabled={isDisabledSubmit}
+            disabled={isDisabledSubmit || isLoading}
           >
             Send message
           </Button>
@@ -76,24 +90,34 @@ export const ContactForm: React.FC<Props> = ({
 
   const [isDisabledSubmit, setIsDisabledSubmit] = React.useState(true);
 
-  const capchaCheckHandler = () => setIsDisabledSubmit(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
+  const isEnLanguage = useSelector(coreSelectors.isEnLanguage);
+
+  const dispatch = useDispatch();
+
+  const capchaCheckHandler = () => setIsDisabledSubmit(false);
   const handleSubmitForm = async ({ email, firstName, message }: typeof initialFormValues) => {
-    emailjs
-      .send(
-        'progryx-web-google-mail',
-        'template_f97pyh9',
-        { clientName: firstName, clientEmailAdress: email, clientMessage: message },
-        'user_plvvPqDqUxCIvknzdbbPK'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.error(error.text);
-        }
-      );
+    const payload = {
+      clientName: firstName,
+      clientEmailAdress: email,
+      clientMessage: message,
+    };
+
+    setIsLoading(true);
+
+    emailjs.send(EMAIL_JS.serviceId, EMAIL_JS.templateId, payload, EMAIL_JS.userId).then(
+      () => {
+        const message = isEnLanguage ? EN_LOCALE.messageSended : RU_LOCALE.messageSended;
+        setIsLoading(false);
+        dispatch(coreActions.setMessage({ message }));
+      },
+      () => {
+        const message = isEnLanguage ? EN_LOCALE.messageSendFail : RU_LOCALE.messageSendFail;
+        setIsLoading(false);
+        dispatch(coreActions.setMessage({ message }));
+      }
+    );
   };
 
   return (
@@ -130,6 +154,7 @@ export const ContactForm: React.FC<Props> = ({
                   </Box>
                   {isBasicLayout && (
                     <FormControls
+                      isLoading={isLoading}
                       capchaCheckHandler={capchaCheckHandler}
                       isDisabledSubmit={isDisabledSubmit}
                     />
@@ -151,6 +176,7 @@ export const ContactForm: React.FC<Props> = ({
               </Grid>
               {!isBasicLayout && (
                 <FormControls
+                  isLoading={isLoading}
                   capchaCheckHandler={capchaCheckHandler}
                   isDisabledSubmit={isDisabledSubmit}
                 />

@@ -66,6 +66,7 @@ module.exports = () => {
         '@hooks': path.resolve(__dirname, 'src/hooks'),
         '@utils': path.resolve(__dirname, 'src/utils'),
         '@reducers': path.resolve(__dirname, 'src/reducers'),
+        '@locales': path.resolve(__dirname, 'src/locales'),
       },
     },
     module: {
@@ -83,7 +84,6 @@ module.exports = () => {
             {
               loader: 'css-loader',
               options: {
-                localsConvention: 'camelCase',
                 modules: {
                   localIdentName: '[name]__[local]__[hash:base64:5]',
                 },
@@ -92,8 +92,9 @@ module.exports = () => {
             {
               loader: 'postcss-loader',
               options: {
-                ident: 'postcss',
-                plugins: () => [require('autoprefixer')()],
+                postcssOptions: {
+                  plugins: ['autoprefixer'],
+                },
               },
             },
             { loader: 'sass-loader' },

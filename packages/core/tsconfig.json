@@ -15,10 +15,11 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
+      "@reducers/*": ["./src/reducers/*"],
+      "@locales/*": ["./src/locales/*"],
       "@constants/*": ["./src/constants/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@utils/*": ["src/utilities/*"],
-      "@modules/*": ["./src/reducers/*"],
       "@assets/*": ["./assets/*"],
       "auth/*": ["../auth/exposes/*"]
     }

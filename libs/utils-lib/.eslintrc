@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "@typescript-eslint", "@typescript-eslint/tslint", "react", "jest"],
+  "plugins": ["import", "@typescript-eslint", "@typescript-eslint/tslint", "react"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -88,12 +88,7 @@
       }
     ],
     "react/self-closing-comp": "warn",
-    "jsx-a11y/anchor-is-valid": 0,
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    "jsx-a11y/anchor-is-valid": 0
   },
   "settings": {
     "react": {
