@@ -1,39 +1,82 @@
 import React from 'react';
 
 import { Box, Divider, Typography } from '@material-ui/core';
-import { ProgressBar } from '@src/components';
+import { Security, Web as SiteIcon } from '@material-ui/icons';
+import { BxlJavascriptIcon, BxlReactIcon, Html5Icon, WebpackIcon } from '@portfolio-app/icons-lib';
+import { ListItem, ProgressBar } from '@src/components';
 import { List } from '@src/components';
+import { useLocale } from '@src/hooks';
 
-import { FrontEndSkills, mySkills, WebDevelopmentSkills } from './contstants';
+import { mySkills } from './contstants';
 import styles from './styles.scss';
 
-const SkillsList: React.FC = () => (
-  <Box component="div" display="flex" flexDirection="column">
-    <Typography variant="h4">My Skills</Typography>
+const SkillsList: React.FC = () => {
+  const localedText = useLocale();
 
-    <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
-      <span className={styles.mySkills__skillHeader}>Web Development</span>
-      <Typography>
-        Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large nies
-        (Alfa Bank, VTB, Gazprom) in the Agile team.Working as IP (as a remote employee under a work
-        contract (contractor)).
-      </Typography>
-      <Divider id={styles.divider} />
-      <span className={styles.mySkills__skillSubHeader}>Main directions: </span>
-      <List items={WebDevelopmentSkills} />
-    </Box>
+  const webDevelopmentSkills: ListItem[] = [
+    {
+      description: localedText('webDevelopmentSkillReact'),
+      Icon: <BxlReactIcon />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+    {
+      description: localedText('webDevelopmentSkillLayout'),
+      Icon: <SiteIcon fontSize="large" />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+    {
+      description: localedText('webDevelopmentSkillIS'),
+      Icon: <Security fontSize="large" />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+  ];
 
-    <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
-      <span className={styles.mySkills__skillHeader}>Frontend Development</span>
-      <Typography>
-        Confident knowledge of modern methods and technologies of front-end development.
-      </Typography>
-      <Divider id={styles.divider} />
-      <span className={styles.mySkills__skillSubHeader}>Main skills: </span>
-      <List items={FrontEndSkills} />
+  const FrontEndSkills: ListItem[] = [
+    {
+      description: localedText('frontEndDevelopmentSkillJS'),
+      Icon: <BxlJavascriptIcon />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+
+    {
+      description: localedText('frontEndDevelopmentSkillHTML'),
+      Icon: <Html5Icon />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+
+    {
+      description: localedText('frontEndDevelopmentSkillWebpack'),
+      Icon: <WebpackIcon />,
+      iconClassname: styles.mySkills__skillIcon,
+    },
+  ];
+
+  return (
+    <Box component="div" display="flex" flexDirection="column">
+      <Typography variant="h4">{localedText('mySkills')}</Typography>
+
+      <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
+        <span className={styles.mySkills__skillHeader}>{localedText('webDevelopment')}: </span>
+        <Typography>{localedText('webDevelopmentDescription')}</Typography>
+        <Divider id={styles.divider} />
+        <span className={styles.mySkills__skillSubHeader}>
+          {localedText('webDevelopmentMainDirections')}
+        </span>
+        <List items={webDevelopmentSkills} />
+      </Box>
+
+      <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
+        <span className={styles.mySkills__skillHeader}>{localedText('frontEndDevelopment')}</span>
+        <Typography>{localedText('frontEndDevelopmentDescription')}</Typography>
+        <Divider id={styles.divider} />
+        <span className={styles.mySkills__skillSubHeader}>
+          {localedText('frontEndDevelopmentMainSkills')}:{' '}
+        </span>
+        <List items={FrontEndSkills} />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+};
 
 const SkillsLevel: React.FC = () => (
   <Box component="div" display="flex" flexDirection="column">

@@ -1,11 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Languages, LANG_NAMES } from '@src/locales';
 import { PropertiesTypes } from '@src/utilities';
 
 import { RootState } from '../index';
 
 export type CoreActionTypes = ReturnType<PropertiesTypes<typeof coreActions>>;
-
-type Languages = 'RU' | 'EN';
 
 export type CoreState = {
   toastMessage: string | null;
@@ -39,6 +38,8 @@ export const coreSlice = createSlice({
 
 export const coreSelectors = {
   getCurrentLang: (state: RootState) => state.core.language,
+  getCurrentLangName: (state: RootState) =>
+    state.core.language === 'EN' ? LANG_NAMES.EN : LANG_NAMES.RU,
   isEnLanguage: (state: RootState) => state.core.language === 'EN',
   getToastMessage: (state: RootState) => state.core.toastMessage,
 };

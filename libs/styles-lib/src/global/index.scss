@@ -10,6 +10,7 @@ body,
 body {
   color: $main_color;
   font-family: Roboto;
+  white-space: pre-line;
 
   @include baseFontProps($font_m, 400, 1);
 }

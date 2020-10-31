@@ -2,10 +2,16 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { ROUTES_MAP } from '@constants/routesMap';
-import { AppBar, Box, Container, Tab, Typography } from '@material-ui/core';
+import { AppBar, Box, Container, Tab, Toolbar, Typography } from '@material-ui/core';
 import { HomeOutlined, WorkOutline } from '@material-ui/icons';
+import TranslateIcon from '@material-ui/icons/Translate';
 import { TabContext, TabList } from '@material-ui/lab';
+import { coreActions, coreSelectors } from '@reducers/core';
+import { useLocale } from '@src/hooks';
 import { useNavigation } from '@src/hooks/useNavigation';
+import { useDispatch, useSelector } from '@src/store';
+
+import { DropdownMenu, MenuItem } from '@components/DropdownMenu';
 
 import styles from './styles.scss';
 
@@ -14,6 +20,23 @@ export const Layout: React.FC = ({ children }) => {
 
   const currentTab = useNavigation();
 
+  const currentLocale = useSelector(coreSelectors.getCurrentLangName);
+
+  const dispatch = useDispatch();
+
+  const localeText = useLocale();
+
+  const localesList: MenuItem[] = [
+    {
+      description: 'English',
+      handleClickItem: () => dispatch(coreActions.setLanguage({ lang: 'EN' })),
+    },
+    {
+      description: 'Русский',
+      handleClickItem: () => dispatch(coreActions.setLanguage({ lang: 'RU' })),
+    },
+  ];
+
   function hangleChangeLocation(location: string) {
     history.push(`${location}`);
   }
@@ -21,26 +44,35 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <TabContext value={currentTab}>
       <AppBar position="fixed" color="primary" square className={styles.NavBar}>
-        <TabList className={styles.NavBar__tabs}>
-          <Tab
-            classes={{
-              wrapper: styles.NavBar__tabItem,
-            }}
-            label="About me"
-            onClick={() => hangleChangeLocation(ROUTES_MAP.main)}
-            icon={<HomeOutlined fontSize="small" />}
-            value="0"
+        <Toolbar>
+          <TabList className={styles.NavBar__tabs}>
+            <Tab
+              classes={{
+                wrapper: styles.NavBar__tabItem,
+              }}
+              label={localeText('aboutMe')}
+              onClick={() => hangleChangeLocation(ROUTES_MAP.main)}
+              icon={<HomeOutlined fontSize="small" />}
+              value="0"
+            />
+            <Tab
+              classes={{
+                wrapper: styles.NavBar__tabItem,
+              }}
+              onClick={() => hangleChangeLocation(ROUTES_MAP.projects)}
+              label={localeText('myProjects')}
+              icon={<WorkOutline fontSize="small" />}
+              value="1"
+            />
+          </TabList>
+          <DropdownMenu
+            items={localesList}
+            linkMenuText={currentLocale}
+            buttonColor="inherit"
+            buttonVariant="text"
+            buttonIcon={<TranslateIcon />}
           />
-          <Tab
-            classes={{
-              wrapper: styles.NavBar__tabItem,
-            }}
-            onClick={() => hangleChangeLocation(ROUTES_MAP.projects)}
-            label="My projects"
-            icon={<WorkOutline fontSize="small" />}
-            value="1"
-          />
-        </TabList>
+        </Toolbar>
       </AppBar>
       <Container maxWidth="lg" component="main" className={styles.gridLayout__container}>
         <Box m={0}>{children}</Box>
@@ -48,7 +80,7 @@ export const Layout: React.FC = ({ children }) => {
       <AppBar position="static" color="primary" square component="footer">
         <Box m={1} p={1}>
           <Typography variant="subtitle2" align="center">
-            Nikitin German. Frontend developer. 2014-2020
+            {localeText('footerContent')}
           </Typography>
         </Box>
       </AppBar>

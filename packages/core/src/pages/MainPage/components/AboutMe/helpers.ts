@@ -4,13 +4,13 @@ import rtfEngCV from '@assets/files/ENG_CV/ENG_CV.rtf';
 import docRuCV from '@assets/files/RU_CV/RU_CV.doc';
 import pdfRuCV from '@assets/files/RU_CV/RU_CV.pdf';
 import rtfRuCV from '@assets/files/RU_CV/RU_CV.rtf';
+import { Languages } from '@src/locales';
 import printJS from 'print-js';
 
-type Languages = 'en' | 'ru';
 type Extensions = 'doc' | 'pdf' | 'rtf';
 
 export const downloadCV = (lang: Languages, extension: Extensions) => {
-  const isEnLang = lang === 'en';
+  const isEnLang = lang === 'EN';
 
   switch (extension) {
     case 'doc': {
@@ -32,7 +32,7 @@ export const downloadCV = (lang: Languages, extension: Extensions) => {
 };
 
 export const printCV = (lang: Languages) => {
-  const isEnLang = lang === 'en';
+  const isEnLang = lang === 'EN';
 
   if (isEnLang) {
     printJS({

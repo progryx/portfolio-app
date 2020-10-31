@@ -13,6 +13,7 @@ type Props = {
   buttonIcon?: ButtonProps['startIcon'];
   buttonSize?: ButtonProps['size'];
   buttonColor?: ButtonProps['color'];
+  buttonVariant?: ButtonProps['variant'];
   buttonClassName?: string;
 };
 
@@ -23,6 +24,7 @@ export const DropdownMenu: React.FC<Props> = ({
   buttonColor,
   buttonSize,
   buttonClassName,
+  buttonVariant = 'contained',
 }) => {
   const [element, setElement] = React.useState<null | HTMLElement>(null);
 
@@ -37,7 +39,7 @@ export const DropdownMenu: React.FC<Props> = ({
   return (
     <Box m={1} p={1}>
       <Button
-        variant="contained"
+        variant={buttonVariant}
         color={buttonColor}
         startIcon={buttonIcon}
         onClick={handleClick}
@@ -54,8 +56,13 @@ export const DropdownMenu: React.FC<Props> = ({
         onClose={handleClose}
       >
         {items.map(({ description, handleClickItem }, index) => {
+          const handleClick = () => {
+            handleClickItem();
+            handleClose();
+          };
+
           return (
-            <MatUiMenuItem key={index} onClick={handleClickItem}>
+            <MatUiMenuItem key={index} onClick={handleClick}>
               {description}
             </MatUiMenuItem>
           );
