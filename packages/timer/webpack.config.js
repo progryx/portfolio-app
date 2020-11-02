@@ -16,26 +16,16 @@ module.exports = () => {
       },
     }),
     new HtmlWebpackPlugin({
-      hosts: {
-        core: {
-          port: 3000,
-          url: 'http://localhost:3000',
-          remote: '/core/',
-        },
-        timer: {
-          port: 3001,
-          url: 'http://localhost:3001',
-          remote: '/timer/',
-        },
-      },
       template: './public/index.html',
       favicon: './public/favicon.ico',
     }),
     new ModuleFederationPlugin({
-      name: 'core',
-      library: { type: 'var', name: 'core' },
+      name: 'timer',
+      library: { type: 'var', name: 'timer' },
       filename: 'remoteEntry.js',
-      remotes: { timer: 'timer' },
+      remotes: {
+        core: 'core',
+      },
       exposes: require('./exports.json'),
       shared: {
         react: {
@@ -61,28 +51,19 @@ module.exports = () => {
   return {
     entry: './src/index',
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      port: 3000,
       historyApiFallback: true,
+      contentBase: path.join(__dirname, 'dist'),
+      port: 3001,
     },
     output: {
-      publicPath: 'http://localhost:3000/',
       path: path.join(__dirname, '/dist'),
       filename: 'main.js',
-      libraryTarget: 'umd',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],
       modules: [path.resolve(__dirname, './src'), path.resolve(__dirname, './node_modules')],
       alias: {
         '@src': path.resolve(__dirname, 'src'),
-        '@assets': path.resolve(__dirname, 'assets'),
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@constants': path.resolve(__dirname, 'src/constants'),
-        '@hooks': path.resolve(__dirname, 'src/hooks'),
-        '@utils': path.resolve(__dirname, 'src/utils'),
-        '@reducers': path.resolve(__dirname, 'src/reducers'),
-        '@locales': path.resolve(__dirname, 'src/locales'),
       },
     },
     module: {

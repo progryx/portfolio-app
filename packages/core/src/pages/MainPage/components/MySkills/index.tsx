@@ -10,7 +10,7 @@ import { useLocale } from '@src/hooks';
 import { mySkills } from './contstants';
 import styles from './styles.scss';
 
-const SkillsList: React.FC = () => {
+const SkillsList: React.FC = React.memo(() => {
   const localedText = useLocale();
 
   const webDevelopmentSkills: ListItem[] = [
@@ -76,28 +76,31 @@ const SkillsList: React.FC = () => {
       </Box>
     </Box>
   );
-};
+});
 
-const SkillsLevel: React.FC = () => (
-  <Box component="div" display="flex" flexDirection="column">
-    <Typography variant="h4">My skills level</Typography>
-    <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
-      {mySkills
-        .sort((a, b) => b.level - a.level)
-        .map((skill, index) => {
-          return (
-            <ProgressBar key={index} Icon={skill.icon} skill={skill.name} value={skill.level} />
-          );
-        })}
+const SkillsLevel: React.FC = React.memo(() => {
+  const localedText = useLocale();
+  return (
+    <Box component="div" display="flex" flexDirection="column">
+      <Typography variant="h4">{localedText('mySkillsLevel')}</Typography>
+      <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
+        {mySkills
+          .sort((a, b) => b.level - a.level)
+          .map((skill, index) => {
+            return (
+              <ProgressBar key={index} Icon={skill.icon} skill={skill.name} value={skill.level} />
+            );
+          })}
+      </Box>
     </Box>
-  </Box>
-);
+  );
+});
 
-export const MySkills: React.FC = () => {
+export const MySkills: React.FC = React.memo(() => {
   return (
     <Box component="div" m={1} p={1}>
       <SkillsList />
       <SkillsLevel />
     </Box>
   );
-};
+});

@@ -14,6 +14,7 @@ import {
 } from '@material-ui/core';
 import { coreActions, coreSelectors } from '@reducers/core';
 import { EMAIL_JS, GOOGLE_API_KEY } from '@src/constants';
+import { useLocale } from '@src/hooks';
 import { useDispatch, useSelector } from '@src/store';
 import { GetFormKeys, validation } from '@src/utilities';
 import cn from 'classnames';
@@ -53,14 +54,16 @@ const FormControls: React.FC<{
   isDisabledSubmit: boolean;
   isLoading: boolean;
 }> = ({ capchaCheckHandler, isDisabledSubmit, isLoading }) => {
+  const localedText = useLocale();
+
   return (
-    <Grid container xs={12}>
-      <Grid item>
+    <Grid container alignItems="center">
+      <Grid item xs={12}>
         <Box m={1}>
           <ReCAPTCHA sitekey={GOOGLE_API_KEY} size="normal" onChange={capchaCheckHandler} />
         </Box>
       </Grid>
-      <Grid item>
+      <Grid item xs={12}>
         <Box ml={1}>
           <Button
             variant="contained"
@@ -70,7 +73,7 @@ const FormControls: React.FC<{
             size="large"
             disabled={isDisabledSubmit || isLoading}
           >
-            Send message
+            {localedText('formSubmitButtonText')}
           </Button>
         </Box>
       </Grid>
@@ -86,17 +89,19 @@ export const ContactForm: React.FC<Props> = ({
   messageRows = 5,
   formClassName,
 }) => {
-  const isBasicLayout = formLaylout === 'basic';
-
   const [isDisabledSubmit, setIsDisabledSubmit] = React.useState(true);
 
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const isEnLanguage = useSelector(coreSelectors.isEnLanguage);
+  const localedText = useLocale();
 
   const dispatch = useDispatch();
 
-  const capchaCheckHandler = () => setIsDisabledSubmit(false);
+  const isEnLanguage = useSelector(coreSelectors.isEnLanguage);
+
+  const isBasicLayout = formLaylout === 'basic';
+
+  const captchaCheckHandler = () => setIsDisabledSubmit(false);
   const handleSubmitForm = async ({ email, firstName, message }: typeof initialFormValues) => {
     const payload = {
       clientName: firstName,
@@ -138,7 +143,7 @@ export const ContactForm: React.FC<Props> = ({
                     {createTextField<ContactFormValues>({
                       name: 'firstName',
                       validate: validation.firstNameRequired,
-                      label: 'Your name',
+                      label: localedText('formNameLabel'),
                       variant: 'outlined',
                       className: styles.contactForm__inputText,
                     })}
@@ -147,7 +152,7 @@ export const ContactForm: React.FC<Props> = ({
                     {createTextField<ContactFormValues>({
                       name: 'email',
                       validate: validation.emailRequired,
-                      label: 'Your e-mail',
+                      label: localedText('formEmailLabel'),
                       variant: 'outlined',
                       className: styles.contactForm__inputText,
                     })}
@@ -155,7 +160,7 @@ export const ContactForm: React.FC<Props> = ({
                   {isBasicLayout && (
                     <FormControls
                       isLoading={isLoading}
-                      capchaCheckHandler={capchaCheckHandler}
+                      capchaCheckHandler={captchaCheckHandler}
                       isDisabledSubmit={isDisabledSubmit}
                     />
                   )}
@@ -165,7 +170,7 @@ export const ContactForm: React.FC<Props> = ({
                     {createTextField<ContactFormValues>({
                       name: 'message',
                       validate: validation.messageRequired,
-                      label: 'Your message',
+                      label: localedText('formMessageLabel'),
                       rows: messageRows,
                       isMultiline: true,
                       variant: 'outlined',
@@ -177,7 +182,7 @@ export const ContactForm: React.FC<Props> = ({
               {!isBasicLayout && (
                 <FormControls
                   isLoading={isLoading}
-                  capchaCheckHandler={capchaCheckHandler}
+                  capchaCheckHandler={captchaCheckHandler}
                   isDisabledSubmit={isDisabledSubmit}
                 />
               )}

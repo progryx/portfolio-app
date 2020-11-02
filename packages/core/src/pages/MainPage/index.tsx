@@ -16,7 +16,7 @@ export const MainPage: React.FC = () => {
 
   return (
     <TabPanel value={currentTab} id={styles.tabPane}>
-      <Grid container>
+      <Grid container alignItems="center">
         <PersonalInfo />
         <Content />
       </Grid>

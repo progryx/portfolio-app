@@ -14,14 +14,7 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@reducers/*": ["./src/reducers/*"],
-      "@locales/*": ["./src/locales/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["src/utilities/*"],
-      "@assets/*": ["./assets/*"],
-      "timer/*": ["../timer/exports/*"],
+      "core/*": ["../core/exports/*"],
     }
   },
   "exclude": ["node_modules"],

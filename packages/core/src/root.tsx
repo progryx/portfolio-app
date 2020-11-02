@@ -9,6 +9,9 @@ import { Layout } from './components';
 import { MainPage } from './pages/MainPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 
+const TimerApp = React.lazy(() => import('timer/TimerApp'));
+
+/** APPLICATIONS */
 export const Root: React.FC = () => {
   return (
     <React.Suspense fallback={'Loading...'}>
@@ -20,6 +23,9 @@ export const Root: React.FC = () => {
             </Route>
             <Route exact path={ROUTES_MAP.projects}>
               <ProjectsPage />
+            </Route>
+            <Route path={ROUTES_MAP.timer} exact>
+              <TimerApp />
             </Route>
           </Switch>
         </Layout>
