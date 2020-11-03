@@ -1,0 +1,11 @@
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+.personalInfo {
+  &__photo {
+    min-height: $base * 137.5;
+  }
+
+  &__contacts {
+    margin-top: $space_s;
+  }
+}

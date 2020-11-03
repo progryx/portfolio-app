@@ -1,0 +1,19 @@
+@mixin includeFont($fontName, $fontType, $fontWeight, $fontStyle) {
+  $path: "../fonts/#{$fontName}";
+
+  @font-face {
+    src: local("#{$fontName} #{$fontType}"), local("#{$fontName}-#{$fontType}"),
+      url("#{$path}-#{$fontType}.ttf") format("truetype");
+
+    font-family: "#{$fontName}";
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+    font-display: swap;
+  }
+}
+
+@mixin baseFontProps($fontSize, $fontWeight, $lineHeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}

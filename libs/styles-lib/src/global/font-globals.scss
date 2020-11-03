@@ -1,0 +1,6 @@
+@import "../mixins/font-mixins.scss";
+
+$mainFont: "Roboto";
+
+@include includeFont($mainFont, "Regular", 500, normal);
+@include includeFont($mainFont, "Light", 400, normal);

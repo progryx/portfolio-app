@@ -1,0 +1,12 @@
+@import '~@portfolio-app/styles-lib/src/mixins/font-mixins';
+@import '~@portfolio-app/styles-lib/src/properties/sizes';
+@import '~@portfolio-app/styles-lib/src/properties/spacing';
+
+.progressBar {
+  &__textLabel {
+    align-self: center;
+
+    @include baseFontProps($font_m, 400, 1);
+    margin-left: $space_xs;
+  }
+}

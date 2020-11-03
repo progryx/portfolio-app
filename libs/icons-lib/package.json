@@ -1,0 +1,16 @@
+{
+  "name": "@portfolio-app/icons-lib",
+  "version": "1.0.0",
+  "description": "Global icons for project",
+  "main": "src/index.tsx",
+  "author": "progryx",
+  "devDependencies": {
+    "typescript": "4.0.3"
+  },
+  "dependencies": {
+    "@types/react": "16.8.24",
+    "@types/react-dom": "^16.9.8",
+    "react-dom": "^17.0.1",
+    "react": "^17.0.1"
+  }
+}
