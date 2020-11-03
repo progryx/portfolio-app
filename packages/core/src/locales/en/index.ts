@@ -98,4 +98,6 @@ export const EN_LOCALE = {
   projectsTimerDescription:
     'Simple react timer with Material UI styles and components\n.' +
     'You can set timer interval, reset timer or pause it.',
+  homeLink: 'Home',
+  openProject: 'Open project',
 };

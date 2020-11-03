@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Avatar,
   Box,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -11,11 +12,8 @@ import {
   IconButton,
   Typography,
 } from '@material-ui/core';
-import {
-  MoreVert as MoreVertIcon,
-  OpenInBrowser as OpenIcon,
-  Share as ShareIcon,
-} from '@material-ui/icons';
+import { MoreVert as MoreVertIcon, OpenInBrowser as OpenIcon } from '@material-ui/icons';
+import { useLocale } from '@src/hooks';
 
 import styles from './styles.scss';
 
@@ -23,7 +21,7 @@ export type ProjectsItem = {
   name: string;
   stack: string;
   description: string;
-  onpenProjectHangler: () => void;
+  openProjectHandler: () => void;
   imageSrc: string;
   icon: JSX.Element;
 };
@@ -32,10 +30,12 @@ export const ProjectItem: React.FC<ProjectsItem> = ({
   description,
   imageSrc,
   icon,
-  onpenProjectHangler,
+  openProjectHandler,
   name,
   stack,
 }) => {
+  const localedText = useLocale();
+
   return (
     <Box m={1} p={1}>
       <Card className={styles.projectItem}>
@@ -60,12 +60,14 @@ export const ProjectItem: React.FC<ProjectsItem> = ({
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites" onClick={onpenProjectHangler}>
-            <OpenIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
+          <Button
+            variant="outlined"
+            onClick={openProjectHandler}
+            color="default"
+            startIcon={<OpenIcon />}
+          >
+            {localedText('openProject')}
+          </Button>
         </CardActions>
       </Card>
     </Box>

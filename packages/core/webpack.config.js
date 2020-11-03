@@ -16,18 +16,6 @@ module.exports = () => {
       },
     }),
     new HtmlWebpackPlugin({
-      hosts: {
-        core: {
-          port: 3000,
-          url: 'http://localhost:3000',
-          remote: '/core/',
-        },
-        timer: {
-          port: 3001,
-          url: 'http://localhost:3001',
-          remote: '/timer/',
-        },
-      },
       template: './public/index.html',
       favicon: './public/favicon.ico',
     }),

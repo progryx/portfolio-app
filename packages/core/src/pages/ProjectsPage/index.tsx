@@ -25,7 +25,7 @@ export const ProjectsPage: React.FC = () => {
       icon: <Code />,
       imageSrc: TimerImage,
       stack: 'Typescript, React, Material UI',
-      onpenProjectHangler: () => history.push(ROUTES_MAP.timer),
+      openProjectHandler: () => history.push(ROUTES_MAP.timer),
     },
   ];
 
@@ -41,16 +41,15 @@ export const ProjectsPage: React.FC = () => {
           <Box m={1} p={1}>
             <Grid container>
               {projects.map(
-                ({ name, description, icon, stack, imageSrc, onpenProjectHangler }, index) => (
-                  <Grid item xs={4}>
+                ({ name, description, icon, stack, imageSrc, openProjectHandler }, index) => (
+                  <Grid item xs={4} key={index}>
                     <ProjectItem
-                      key={index}
                       name={name}
                       description={description}
                       icon={icon}
                       stack={stack}
                       imageSrc={imageSrc}
-                      onpenProjectHangler={onpenProjectHangler}
+                      openProjectHandler={openProjectHandler}
                     />
                   </Grid>
                 )

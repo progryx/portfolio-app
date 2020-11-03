@@ -1,17 +1,8 @@
 import React from 'react';
-import { useHistory, useLocation, useParams, useRouteMatch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ROUTES_MAP } from '@constants/routesMap';
-import {
-  AppBar,
-  Box,
-  Breadcrumbs,
-  Container,
-  Link,
-  Tab,
-  Toolbar,
-  Typography,
-} from '@material-ui/core';
+import { AppBar, Box, Container, Tab, Toolbar, Typography } from '@material-ui/core';
 import { HomeOutlined, WorkOutline } from '@material-ui/icons';
 import TranslateIcon from '@material-ui/icons/Translate';
 import { TabContext, TabList } from '@material-ui/lab';
@@ -20,33 +11,10 @@ import { useLocale } from '@src/hooks';
 import { useNavigation } from '@src/hooks/useNavigation';
 import { useDispatch, useSelector } from '@src/store';
 
+import { Breadcrumbs } from '@components/Breadcrumbs';
 import { DropdownMenu, MenuItem } from '@components/DropdownMenu';
 
 import styles from './styles.scss';
-
-const Crumbs: React.FC = () => {
-  const params = useParams();
-  const location = useLocation();
-  const routeMatch = useRouteMatch();
-  const history = useHistory();
-
-  console.log('params', params);
-  console.log('location', location);
-  console.log('routeMatch', routeMatch);
-  console.log('history', history);
-
-  return (
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link color="inherit" href="/">
-        Material-UI
-      </Link>
-      <Link color="inherit" href="/getting-started/installation/">
-        Core
-      </Link>
-      <Typography color="textPrimary">Breadcrumb</Typography>
-    </Breadcrumbs>
-  );
-};
 
 export const Layout: React.FC = ({ children }) => {
   const history = useHistory();
@@ -108,7 +76,7 @@ export const Layout: React.FC = ({ children }) => {
         </Toolbar>
       </AppBar>
       <Container maxWidth="lg" component="main" className={styles.gridLayout__container}>
-        <Crumbs />
+        <Breadcrumbs />
         <Box m={0}>{children}</Box>
       </Container>
       <AppBar position="static" color="primary" square component="footer">

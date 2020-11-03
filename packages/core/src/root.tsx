@@ -9,9 +9,9 @@ import { Layout } from './components';
 import { MainPage } from './pages/MainPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 
+/** APPLICATIONS */
 const TimerApp = React.lazy(() => import('timer/TimerApp'));
 
-/** APPLICATIONS */
 export const Root: React.FC = () => {
   return (
     <React.Suspense fallback={'Loading...'}>

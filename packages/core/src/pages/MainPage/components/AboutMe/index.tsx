@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Divider, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Divider, Grid, Typography } from '@material-ui/core';
 import { Cake, LocationOn, School } from '@material-ui/icons';
 import { CloudDownload, Print } from '@material-ui/icons';
 import { coreSelectors } from '@reducers/core';
@@ -24,17 +24,6 @@ const downloadEngCvItems: MenuItem[] = [
   {
     description: 'Adobe Reader (.pdf)',
     handleClickItem: () => downloadCV('EN', 'pdf'),
-  },
-];
-
-const printCVItems: MenuItem[] = [
-  {
-    description: 'In English',
-    handleClickItem: () => printCV('EN'),
-  },
-  {
-    description: 'На русском',
-    handleClickItem: () => printCV('RU'),
   },
 ];
 
@@ -75,6 +64,10 @@ export const AboutMe: React.FC = () => {
     },
   ];
 
+  function printCvHandler() {
+    printCV(isEnLocale ? 'EN' : 'RU');
+  }
+
   return (
     <>
       <Box component="div" m={1} p={1}>
@@ -105,14 +98,17 @@ export const AboutMe: React.FC = () => {
                 buttonSize="large"
                 buttonClassName={styles.aboutMe__buttons}
               />
-              <DropdownMenu
-                items={printCVItems}
-                linkMenuText={localedText('printMyCv')}
-                buttonColor="default"
-                buttonIcon={<Print />}
-                buttonSize="large"
-                buttonClassName={styles.aboutMe__buttons}
-              />
+              <Box m={1} p={1}>
+                <Button
+                  variant="contained"
+                  className={styles.aboutMe__buttons}
+                  color="default"
+                  startIcon={<Print />}
+                  onClick={printCvHandler}
+                >
+                  {localedText('printMyCv')}
+                </Button>
+              </Box>
             </Box>
           </Grid>
         </Grid>

@@ -10,5 +10,10 @@
   "devDependencies": {
     "lerna": "^3.22.1",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "scripts": {
+    "install": "lerna bootstrap",
+    "start": "lerna run --parallel start",
+    "lint": "lerna run lint"
   }
 }

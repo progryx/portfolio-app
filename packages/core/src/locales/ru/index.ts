@@ -103,4 +103,6 @@ export const RU_LOCALE = {
   projectsTimerDescription:
     'Просто таймер на React, с использованием стилей и компонентов Material UI\n.' +
     'Можно установить интервал, сбросить таймер или поставить его на паузу.',
+  homeLink: 'Главная',
+  openProject: 'Открыть проект',
 };
