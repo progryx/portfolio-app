@@ -15,14 +15,9 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
+      "@helpers/*": ["./src/helpers/*"],
       "@reducers/*": ["./src/reducers/*"],
-      "@locales/*": ["./src/locales/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utilities/*": ["src/utilities/*"],
-      "@assets/*": ["./assets/*"],
-      "timer/*": ["../timer/exports/*"],
-      "dashboard/*": ["../task-dashboard/exports/*"]
+      "core/*": ["../core/exports/*"]
     }
   },
   "exclude": ["node_modules"],

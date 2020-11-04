@@ -16,5 +16,9 @@ export const useRoutesMap = () => {
       url: '/projects/timer',
       name: localedText('projectsTimerName'),
     },
+    dashboard: {
+      url: '/projects/dashboard',
+      name: localedText('projectsTaskDashboard'),
+    },
   };
 };
