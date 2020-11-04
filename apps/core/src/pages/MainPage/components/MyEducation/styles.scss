@@ -1,0 +1,9 @@
+@import '~@portfolio-app/styles/src/properties/spacing';
+
+.myEducation {
+  &__eImage {
+    width: 100%;
+
+    max-width: $base * 60;
+  }
+}

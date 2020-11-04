@@ -1,0 +1,10 @@
+{
+  "name": "@portfolio-app/styles",
+  "version": "1.0.0",
+  "description": "Global styles",
+  "main": "src/index.scss",
+  "author": "progryx",
+  "dependencies": {
+    "@portfolio-app/icons": "^1.0.0"
+  }
+}

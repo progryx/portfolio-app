@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "description": "Progryx portfolio project",
+  "repository": "git@github.com:progryx/portfolio-app.git",
+  "author": "German Nikitin <progryx@gmail.com>",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  },
+  "scripts": {
+    "install": "lerna bootstrap",
+    "start": "lerna run --parallel start",
+    "lint": "lerna run lint",
+    "create-app": "node boilerplate/bin/start.js"
+  }
+}

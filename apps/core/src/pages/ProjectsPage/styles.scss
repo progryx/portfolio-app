@@ -1,0 +1,23 @@
+@import '~@portfolio-app/styles/src/properties/spacing';
+
+.mainPage {
+  width: 100%;
+
+  &__photo {
+    min-height: $base * 90;
+  }
+
+  &__contacts {
+    margin-top: $space_s;
+  }
+
+  &__contact {
+    display: flex;
+
+    align-items: flex-end;
+  }
+
+  &__contactIcon {
+    margin-right: $space_2xs;
+  }
+}

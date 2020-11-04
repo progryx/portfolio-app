@@ -1,0 +1,9 @@
+@import '~@portfolio-app/styles/src/properties/sizes';
+
+.projectItem {
+  width: 100%;
+
+  &__preview {
+    min-height: $base * 75;
+  }
+}
