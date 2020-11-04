@@ -1,0 +1,12 @@
+.grid {
+    height: 100%;
+    overflow: auto;
+}
+
+.isAvailableToDrag {
+    background: rgba(129, 199, 132, 0.5);
+}
+
+.isUnavailableToDrag  {
+    background: rgba(229, 115, 115, 0.5);
+}

@@ -20,12 +20,11 @@ module.exports = () => {
       favicon: './public/favicon.ico',
     }),
     new ModuleFederationPlugin({
-      name: 'core',
-      library: { type: 'var', name: 'core' },
+      name: 'dashboard',
+      library: { type: 'var', name: 'dashboard' },
       filename: 'remoteEntry.js',
       remotes: {
-        timer: 'timer',
-        dashboard: 'dashboard',
+        core: 'core',
       },
       exposes: require('./exports.json'),
       shared: {
@@ -53,28 +52,22 @@ module.exports = () => {
   return {
     entry: './src/index',
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      port: 3000,
       historyApiFallback: true,
+      contentBase: path.join(__dirname, 'dist'),
+      port: 3002,
     },
     output: {
-      publicPath: 'http://localhost:3000/',
       path: path.join(__dirname, '/dist'),
       filename: 'main.js',
-      libraryTarget: 'umd',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],
       modules: [path.resolve(__dirname, './src'), path.resolve(__dirname, './node_modules')],
       alias: {
-        '@src': path.resolve(__dirname, 'src'),
-        '@assets': path.resolve(__dirname, 'assets'),
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@constants': path.resolve(__dirname, 'src/constants'),
-        '@hooks': path.resolve(__dirname, 'src/hooks'),
-        '@utilities': path.resolve(__dirname, 'src/utilities'),
-        '@reducers': path.resolve(__dirname, 'src/reducers'),
-        '@locales': path.resolve(__dirname, 'src/locales'),
+        '@src': path.resolve(__dirname, './src'),
+        '@components': path.resolve(__dirname, './src/components'),
+        '@helpers': path.resolve(__dirname, './src/helpers'),
+        '@reducers': path.resolve(__dirname, './src/reducers'),
       },
     },
     module: {
@@ -86,7 +79,7 @@ module.exports = () => {
           },
         },
         {
-          test: /\.scss$/,
+          test: /\.css$/,
           use: [
             'style-loader',
             {
@@ -105,7 +98,6 @@ module.exports = () => {
                 },
               },
             },
-            { loader: 'sass-loader' },
           ],
         },
         {

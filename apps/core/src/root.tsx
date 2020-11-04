@@ -11,6 +11,7 @@ import { ProjectsPage } from './pages/ProjectsPage';
 
 /** APPLICATIONS */
 const TimerApp = React.lazy(() => import('timer/TimerApp'));
+const TaskDashboard = React.lazy(() => import('dashboard/TaskDashboard'));
 
 export const Root: React.FC = () => {
   return (
@@ -26,6 +27,9 @@ export const Root: React.FC = () => {
             </Route>
             <Route path={ROUTES_MAP.timer} exact>
               <TimerApp />
+            </Route>
+            <Route path={ROUTES_MAP.taskDashboard} exact>
+              <TaskDashboard />
             </Route>
           </Switch>
         </Layout>

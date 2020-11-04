@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import TaskDashboard from '@assets/images/task_dashboard.jpg';
 import TimerImage from '@assets/images/timer.png';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Code } from '@material-ui/icons';
@@ -26,6 +27,14 @@ export const ProjectsPage: React.FC = () => {
       imageSrc: TimerImage,
       stack: 'Typescript, React, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.timer),
+    },
+    {
+      name: localedText('projectsTaskDashboard'),
+      description: localedText('projectsTaskDashboardDescription'),
+      icon: <Code />,
+      imageSrc: TaskDashboard,
+      stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
+      openProjectHandler: () => history.push(ROUTES_MAP.taskDashboard),
     },
   ];
 
