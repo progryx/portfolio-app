@@ -2,24 +2,29 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { ROUTES_MAP } from '@constants/routesMap';
-import { AppBar, Box, Container, Tab, Toolbar, Typography } from '@material-ui/core';
-import { HomeOutlined, WorkOutline } from '@material-ui/icons';
+import { AppBar, Box, Button, Container, Toolbar, Typography } from '@material-ui/core';
+import {
+  BarChart,
+  HomeOutlined,
+  ImportantDevices,
+  School,
+  TrendingUp,
+  WorkOutline,
+} from '@material-ui/icons';
 import TranslateIcon from '@material-ui/icons/Translate';
-import { TabContext, TabList } from '@material-ui/lab';
 import { coreActions, coreSelectors } from '@reducers/core';
 import { useDispatch, useSelector } from '@reducers/store';
 import { useLocale } from '@src/hooks';
-import { useNavigation } from '@src/hooks/useNavigation';
 
 import { Breadcrumbs } from '@components/Breadcrumbs';
 import { DropdownMenu, MenuItem } from '@components/DropdownMenu';
+
+import { Logo } from '../Logo';
 
 import styles from './styles.scss';
 
 export const Layout: React.FC = ({ children }) => {
   const history = useHistory();
-
-  const currentTab = useNavigation();
 
   const currentLocale = useSelector(coreSelectors.getCurrentLangName);
 
@@ -39,34 +44,72 @@ export const Layout: React.FC = ({ children }) => {
   ];
 
   const handleChangeLocation = (location: string) => {
-    history.push(`${location}`);
+    history.push(location);
   };
 
   return (
-    <TabContext value={currentTab}>
+    <>
       <AppBar position="fixed" color="primary" square className={styles.NavBar}>
-        <Toolbar>
-          <TabList className={styles.NavBar__tabs}>
-            <Tab
-              classes={{
-                wrapper: styles.NavBar__tabItem,
-              }}
-              label={localeText('aboutMe')}
-              onClick={() => handleChangeLocation(ROUTES_MAP.main)}
-              icon={<HomeOutlined fontSize="small" />}
-              value="0"
-            />
-            <Tab
-              classes={{
-                wrapper: styles.NavBar__tabItem,
-              }}
+        <Toolbar className={styles.NavBar__toolbar}>
+          <Logo href="#about" onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#about`)} />
+          <div className={styles.NavBar__menu}>
+            <Button
+              variant="text"
+              color="inherit"
+              href="#about"
+              onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#about`)}
+              startIcon={<HomeOutlined fontSize="small" />}
+            >
+              {localeText('aboutMe')}
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
+              href="#skills"
+              onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#skills`)}
+              startIcon={<ImportantDevices fontSize="small" />}
+            >
+              {localeText('mySkills')}
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
+              href="#skillslevel"
+              onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#skillslevel`)}
+              startIcon={<BarChart fontSize="small" />}
+            >
+              {localeText('mySkillsLevel')}
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
+              href="#experience"
+              onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#experience`)}
+              startIcon={<TrendingUp fontSize="small" />}
+            >
+              {localeText('myExperience')}
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
+              href="#education"
+              onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#education`)}
+              startIcon={<School fontSize="small" />}
+            >
+              {localeText('myEducation')}
+            </Button>
+            <Button
+              variant="text"
+              color="inherit"
               onClick={() => handleChangeLocation(ROUTES_MAP.projects)}
-              label={localeText('myProjects')}
-              icon={<WorkOutline fontSize="small" />}
-              value="1"
-            />
-          </TabList>
+              startIcon={<WorkOutline fontSize="small" />}
+            >
+              {localeText('myProjects')}
+            </Button>
+          </div>
+
           <DropdownMenu
+            buttonClassName={styles.NavBar__langButton}
             items={localesList}
             linkMenuText={currentLocale}
             buttonColor="inherit"
@@ -86,6 +129,6 @@ export const Layout: React.FC = ({ children }) => {
           </Typography>
         </Box>
       </AppBar>
-    </TabContext>
+    </>
   );
 };

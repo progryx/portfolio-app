@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --mode development --env development --port 3002",
-    "build": "webpack",
+    "build": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
     "lint": "npm-run-all --parallel lint:*",
     "lint:ts": "eslint 'src/**/*.ts{,x}'",
     "lint-fix": "npm-run-all format lint-fix:*",

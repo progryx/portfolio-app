@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Divider, Typography } from '@material-ui/core';
 import { Security, Web as SiteIcon } from '@material-ui/icons';
 import { BxlJavascriptIcon, BxlReactIcon, Html5Icon, WebpackIcon } from '@portfolio-app/icons';
-import { ListItem, ProgressBar } from '@src/components';
+import { Anchor, ListItem, ProgressBar } from '@src/components';
 import { List } from '@src/components';
 import { useLocale } from '@src/hooks';
 
@@ -53,6 +53,7 @@ const SkillsList: React.FC = React.memo(() => {
 
   return (
     <Box component="div" display="flex" flexDirection="column">
+      <Anchor id="skills" />
       <Typography variant="h4">{localedText('mySkills')}</Typography>
 
       <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
@@ -82,6 +83,7 @@ const SkillsLevel: React.FC = React.memo(() => {
   const localedText = useLocale();
   return (
     <Box component="div" display="flex" flexDirection="column">
+      <Anchor id="skillslevel" />
       <Typography variant="h4">{localedText('mySkillsLevel')}</Typography>
       <Box component="div" m={1} p={1} className={styles.mySkills__skillBox}>
         {mySkills

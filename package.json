@@ -15,6 +15,7 @@
   "scripts": {
     "install": "lerna bootstrap",
     "start": "lerna run --parallel start",
+    "build:prod": "lerna run --parallel build:prod",
     "lint": "lerna run lint",
     "create-app": "node boilerplate/bin/start.js"
   }

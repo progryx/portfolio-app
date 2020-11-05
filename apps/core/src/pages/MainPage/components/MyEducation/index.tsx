@@ -2,7 +2,7 @@ import React from 'react';
 
 import Education from '@assets/images/education.png';
 import { Box, Grid, Typography } from '@material-ui/core';
-import { List, ListItem } from '@src/components';
+import { Anchor, List, ListItem } from '@src/components';
 import { useLocale } from '@src/hooks';
 
 import styles from './styles.scss';
@@ -50,6 +50,7 @@ export const MyEducation: React.FC = React.memo(() => {
 
   return (
     <Box component="div" display="flex" flexDirection="column">
+      <Anchor id="education" />
       <Typography variant="h4">{localedText('myEducation')}</Typography>
       <Box m={1} p={1}>
         <Grid container alignItems="center">

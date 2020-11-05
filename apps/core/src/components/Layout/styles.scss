@@ -12,6 +12,20 @@
 }
 
 .NavBar {
+  &__toolbar {
+    justify-content: center;
+  }
+
+  &__menu {
+    display: flex;
+    flex-basis: 70%;
+    margin-left: $space_m;
+
+    button, a {
+      margin-right: $space_m;
+    }
+  }
+
   &__tabItem {
     @include baseFontProps($font_s, 400, 1);
   }

@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack serve --mode development --env development --port 3000",
     "build": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
     "lint": "npm-run-all --parallel lint:*",
     "lint:ts": "eslint 'src/**/*.ts{,x}'",
     "lint:css": "stylelint 'src/**/*.scss'",
@@ -31,8 +32,6 @@
     "@babel/preset-react": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@babel/runtime": "^7.12.1",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
     "@reduxjs/toolkit": "^1.4.0",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/dom": "^7.26.3",
@@ -98,11 +97,14 @@
     "yarn-upgrade-all": "^0.5.4"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@portfolio-app/icons": "^1.0.0",
     "@portfolio-app/styles": "^1.0.0",
     "@portfolio-app/utilities": "^1.0.0",
     "@types/jest": "^26.0.15",
+    "@types/material-ui": "^0.21.8",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
     "@types/react-google-recaptcha": "^2.1.0",

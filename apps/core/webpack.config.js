@@ -4,7 +4,11 @@ const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlug
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const path = require('path');
 
-module.exports = () => {
+const links = require('../../settings/links');
+
+module.exports = (_env = {}, { mode }) => {
+  const isProduction = mode === 'production';
+
   const plugins = [
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
@@ -52,13 +56,15 @@ module.exports = () => {
 
   return {
     entry: './src/index',
+    mode,
+    devtool: isProduction ? 'source-map' : false,
     devServer: {
       contentBase: path.join(__dirname, 'dist'),
-      port: 3000,
+      port: links.core.port,
       historyApiFallback: true,
     },
     output: {
-      publicPath: 'http://localhost:3000/',
+      publicPath: isProduction ? links.core.prodUrl : links.core.devUrl,
       path: path.join(__dirname, '/dist'),
       filename: 'main.js',
       libraryTarget: 'umd',

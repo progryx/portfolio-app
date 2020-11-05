@@ -1,5 +1,11 @@
+@import '~@portfolio-app/styles/src/properties/sizes';
+
 .aboutMe {
   &__buttons {
     width: 100%;
+  }
+
+  &__anchor {
+    top: -$base * 70;
   }
 }

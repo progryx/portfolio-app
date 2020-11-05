@@ -4,7 +4,12 @@ const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlug
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const path = require('path');
 
-module.exports = () => {
+
+const links = require('../../settings/links');
+
+module.exports = (_env = {}, { mode }) => {
+  const isProduction = mode === 'production';
+
   const plugins = [
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
@@ -51,12 +56,15 @@ module.exports = () => {
 
   return {
     entry: './src/index',
+    mode,
+    devtool: isProduction ? 'source-map' : false,
     devServer: {
       historyApiFallback: true,
       contentBase: path.join(__dirname, 'dist'),
-      port: 3001,
+      port: links.timer.port,
     },
     output: {
+      publicPath: isProduction ? links.timer.prodUrl : links.timer.devUrl,
       path: path.join(__dirname, '/dist'),
       filename: 'main.js',
     },

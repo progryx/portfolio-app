@@ -5,7 +5,7 @@ import { Cake, LocationOn, School } from '@material-ui/icons';
 import { CloudDownload, Print } from '@material-ui/icons';
 import { coreSelectors } from '@reducers/core';
 import { useSelector } from '@reducers/store';
-import { List, ListItem } from '@src/components';
+import { Anchor, List, ListItem } from '@src/components';
 import { DropdownMenu, MenuItem } from '@src/components/DropdownMenu';
 import { useLocale } from '@src/hooks';
 
@@ -70,6 +70,7 @@ export const AboutMe: React.FC = () => {
 
   return (
     <>
+      <Anchor id="about" className={styles.aboutMe__anchor} />
       <Box component="div" m={1} p={1}>
         <Typography variant="body1" color="textSecondary" component="p" align="justify">
           {localedText('aboutMeText')}

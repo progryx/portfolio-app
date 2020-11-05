@@ -34,17 +34,9 @@ export const downloadCV = (lang: Languages, extension: Extensions) => {
 export const printCV = (lang: Languages) => {
   const isEnLang = lang === 'EN';
 
-  if (isEnLang) {
-    printJS({
-      printable: pdfEngCV,
-      showModal: true,
-      type: 'pdf',
-    });
-  } else {
-    printJS({
-      printable: pdfRuCV,
-      showModal: true,
-      type: 'pdf',
-    });
-  }
+  printJS({
+    printable: isEnLang ? pdfEngCV : pdfRuCV,
+    showModal: true,
+    type: 'pdf',
+  });
 };
