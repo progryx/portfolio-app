@@ -8,7 +8,7 @@ import { List } from '@src/components';
 import { useLocale } from '@src/hooks';
 
 import { mySkills } from './contstants';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 const SkillsList: React.FC = React.memo(() => {
   const localedText = useLocale();

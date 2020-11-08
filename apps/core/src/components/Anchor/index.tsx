@@ -2,7 +2,7 @@ import React from 'react';
 
 import cn from 'classnames';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 type Props = {
   id: string;

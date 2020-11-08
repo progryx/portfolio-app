@@ -1,6 +1,0 @@
-{
-  "packages": ["libraries/**", "apps/**"],
-  "npmClient": "yarn",
-  "version": "independent",
-  "granularPathspec": false
-}

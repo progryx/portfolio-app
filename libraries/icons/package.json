@@ -2,7 +2,7 @@
   "name": "@portfolio-app/icons",
   "version": "1.0.0",
   "description": "Global icons for project",
-  "main": "src/index.tsx",
+  "main": "index.ts",
   "author": "progryx",
   "devDependencies": {
     "typescript": "4.0.3"

@@ -7,7 +7,7 @@ import { AppBar, Container, Grid, Toolbar, Typography } from '@material-ui/core'
 
 import { Dashboard } from '@components/Dashboard';
 
-import css from './index.module.css';
+import css from './index.module.scss';
 import { store } from './reducers/store';
 
 export const RootApp: React.FC = () => (

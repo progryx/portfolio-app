@@ -2,7 +2,7 @@ import React, { ComponentType } from 'react';
 
 import { Link } from '@material-ui/core';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 type Props = {
   contactHref: string;

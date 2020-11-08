@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "strict": true,
     "sourceMap": true,
     "noImplicitReturns": true,
@@ -13,10 +13,30 @@
     "removeComments": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["./src/*"],
-      "core/*": ["../core/exports/*"]
-    }
+      "@src/*": [
+        "./src/*"
+      ],
+      "@files/*": [
+        "./public/files/*"
+      ]
+    },
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "module": "esnext"
   },
-  "exclude": ["node_modules"],
-  "include": ["./**/*"]
+  "exclude": [
+    "./node_modules"
+  ],
+  "include": [
+    "./**/*"
+  ]
 }

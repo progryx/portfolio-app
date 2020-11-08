@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 import { CardData, ItemTypes } from '../../reducers/types';
 
-import css from './index.module.css';
+import styles from './index.module.scss';
 
 export const CardComponent: React.FC<CardData> = ({ projectName, taskData, tags, id, status }) => {
   const { priority, type, description, number } = taskData;
@@ -26,27 +26,23 @@ export const CardComponent: React.FC<CardData> = ({ projectName, taskData, tags,
     <div ref={dragRef}>
       <Paper
         elevation={3}
-        className={css.card}
+        className={styles.card}
         style={{
           opacity: isDragging ? 0.5 : 1,
           cursor: 'move',
         }}
       >
         <Card>
-          <CardContent className={css.header}>
+          <CardContent className={styles.header}>
             <Avatar>{type}</Avatar>
             <Typography color="textSecondary">{projectName}</Typography>
           </CardContent>
           <CardContent
-            className={classNames(
-              css.status,
-              priority &&
-                {
-                  low: css.low,
-                  normal: css.normal,
-                  high: css.high,
-                }[priority]
-            )}
+            className={classNames(styles.status, {
+              [styles.low]: priority === 'low',
+              [styles.normal]: priority === 'normal',
+              [styles.high]: priority === 'high',
+            })}
           >
             <Typography color="textSecondary">{number}</Typography>
             <Typography color="textSecondary">{priority}</Typography>

@@ -1,5 +1,6 @@
 @import "../colors/main.scss";
 @import "../properties/sizes.scss";
+@import "../mixins/font-mixins.scss";
 
 html,
 body,
@@ -9,8 +10,8 @@ body,
 
 body {
   color: $main_color;
-  font-family: Roboto;
   white-space: pre-line;
+  font-family: 'Roboto Light', monospace;
 
   @include baseFontProps($font_m, 400, 1);
 }

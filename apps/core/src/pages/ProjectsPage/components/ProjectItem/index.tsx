@@ -15,7 +15,7 @@ import {
 import { MoreVert as MoreVertIcon, OpenInBrowser as OpenIcon } from '@material-ui/icons';
 import { useLocale } from '@src/hooks';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export type ProjectsItem = {
   name: string;

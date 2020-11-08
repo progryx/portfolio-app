@@ -4,7 +4,6 @@ module.exports = {
   moduleDirectories: ['src', 'node_modules'],
   testEnvironment: 'jest-environment-jsdom-fourteen',
   transform: {
-    '.(js|jsx)$': require.resolve('babel-jest'),
     '.(ts|tsx)$': require.resolve('ts-jest'),
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],

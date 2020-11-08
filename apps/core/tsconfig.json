@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "strict": true,
     "sourceMap": true,
     "noImplicitReturns": true,
@@ -11,20 +11,59 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@src/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@reducers/*": ["./src/reducers/*"],
-      "@locales/*": ["./src/locales/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utilities/*": ["src/utilities/*"],
-      "@assets/*": ["./assets/*"],
-      "timer/*": ["../timer/exports/*"],
-      "dashboard/*": ["../task-dashboard/exports/*"]
-    }
+      "@src/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@reducers/*": [
+        "./src/reducers/*"
+      ],
+      "@locales/*": [
+        "./src/locales/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@utilities/*": [
+        "src/utilities/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@files/*": [
+        "./public/files/*"
+      ],
+      "timer/*": [
+        "../timer/exports/*"
+      ],
+      "dashboard/*": [
+        "../task-dashboard/exports/*"
+      ]
+    },
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "module": "esnext"
   },
-  "exclude": ["node_modules"],
-  "include": ["./**/*"]
+  "exclude": [
+    "./node_modules"
+  ],
+  "include": [
+    "./**/*"
+  ]
 }

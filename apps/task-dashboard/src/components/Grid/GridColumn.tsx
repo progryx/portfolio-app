@@ -10,7 +10,7 @@ import classNames from 'classnames';
 
 import { CardComponent } from '../Card';
 
-import css from './index.module.css';
+import css from './index.module.scss';
 
 export const GridColumn: React.FC<{
   status: StatusType;

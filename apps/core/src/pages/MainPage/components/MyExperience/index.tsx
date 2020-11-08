@@ -5,7 +5,7 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import { Anchor, List, ListItem } from '@src/components';
 import { useLocale } from '@src/hooks';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export const MyExperience: React.FC = React.memo(() => {
   const localedText = useLocale();

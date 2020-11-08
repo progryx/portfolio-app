@@ -12,7 +12,7 @@ import {
   withStyles,
 } from '@material-ui/core';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 type LinearProgressWithLabel = LinearProgressProps & {
   value: number;

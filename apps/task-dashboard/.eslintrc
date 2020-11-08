@@ -21,7 +21,7 @@
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "@typescript-eslint/no-explicit-any": ["warn", { "ignoreRestArgs": false }],
+    "@typescript-eslint/no-explicit-any":  ["warn", { "ignoreRestArgs": false }],
     "@typescript-eslint/tslint/config": [
       "error",
       {
@@ -39,12 +39,12 @@
                 },
                 {
                   "name": "Components",
-                  "match": "^@components/",
+                  "match": "^@components\/",
                   "order": 20
                 },
                 {
                   "name": "Utilities",
-                  "match": "^@utilities/",
+                  "match": "^@utilities\/",
                   "order": 30
                 },
                 {

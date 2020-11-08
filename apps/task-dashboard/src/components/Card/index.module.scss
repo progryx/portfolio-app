@@ -1,0 +1,30 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    margin: 10px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+
+    background: #fff;
+}
+
+.low {
+    background: #ffb74d;
+}
+
+.normal {
+    background: #64b5f6
+}
+
+.high {
+    background: #e33371
+}

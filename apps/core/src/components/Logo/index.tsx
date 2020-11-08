@@ -1,16 +1,17 @@
 import React from 'react';
 
-import styles from './styles.scss';
+import Link from 'next/link';
+
+import styles from './styles.module.scss';
 
 type Props = {
-  onClick: () => void;
   href: string;
 };
 
-export const Logo: React.FC<Props> = ({ onClick, href }) => {
+export const Logo: React.FC<Props> = ({ href }) => {
   return (
-    <a href={href} className={styles.logo} onClick={onClick}>
-      {' '}
-    </a>
+    <Link href={href}>
+      <a className={styles.logo}> </a>
+    </Link>
   );
 };

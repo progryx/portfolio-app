@@ -1,19 +1,22 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import TaskDashboard from '@assets/images/task_dashboard.jpg';
 import TimerImage from '@assets/images/timer.png';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Code } from '@material-ui/icons';
+import { Layout } from '@src/components';
 import { ROUTES_MAP } from '@src/constants';
 import { useLocale } from '@src/hooks';
+import { store } from '@src/reducers/store';
+import { useRouter } from 'next/router';
 
 import { ProjectItem, ProjectsItem } from './components/ProjectItem';
 
-export const ProjectsPage: React.FC = () => {
+const Page: React.FC = () => {
   const localedText = useLocale();
 
-  const history = useHistory();
+  const router = useRouter();
 
   const projects: ProjectsItem[] = [
     {
@@ -22,7 +25,7 @@ export const ProjectsPage: React.FC = () => {
       icon: <Code />,
       imageSrc: TimerImage,
       stack: 'Typescript, React, Material UI',
-      openProjectHandler: () => history.push(ROUTES_MAP.timer),
+      openProjectHandler: () => router && router.push(ROUTES_MAP.timer),
     },
     {
       name: localedText('projectsTaskDashboard'),
@@ -30,7 +33,7 @@ export const ProjectsPage: React.FC = () => {
       icon: <Code />,
       imageSrc: TaskDashboard,
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
-      openProjectHandler: () => history.push(ROUTES_MAP.taskDashboard),
+      openProjectHandler: () => router && router.push(ROUTES_MAP.taskDashboard),
     },
   ];
 
@@ -62,5 +65,15 @@ export const ProjectsPage: React.FC = () => {
         </Box>
       </Grid>
     </Grid>
+  );
+};
+
+export const ProjectsPage: React.FC = () => {
+  return (
+    <Provider store={store}>
+      <Layout>
+        <Page />
+      </Layout>
+    </Provider>
   );
 };

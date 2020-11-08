@@ -8,7 +8,7 @@ import { useLocale } from '@src/hooks';
 
 import { AboutMe } from '../AboutMe';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export const PersonalInfo: React.FC = () => {
   const localedText = useLocale();

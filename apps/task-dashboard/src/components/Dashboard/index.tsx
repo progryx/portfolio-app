@@ -8,7 +8,7 @@ import { mainActions, mainSelectors } from '@reducers/main';
 import { GridColumn } from '../Grid/GridColumn';
 import { GridHeader } from '../Grid/GridHeader';
 
-import css from './index.module.css';
+import css from './index.module.scss';
 
 export const Dashboard: React.FC = () => {
   const cardsByGroup = useSelector(mainSelectors.getCardsByGroup);

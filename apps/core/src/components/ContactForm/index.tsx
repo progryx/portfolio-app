@@ -21,7 +21,7 @@ import cn from 'classnames';
 import emailjs from 'emailjs-com';
 import { Formik } from 'formik';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 import { createTextField } from './FormItem';
 
 type FormLayoutTypes = 'inline' | 'basic';

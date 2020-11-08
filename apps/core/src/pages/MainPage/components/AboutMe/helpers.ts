@@ -1,9 +1,9 @@
-import docEngCV from '@assets/files/ENG_CV/ENG_CV.doc';
-import pdfEngCV from '@assets/files/ENG_CV/ENG_CV.pdf';
-import rtfEngCV from '@assets/files/ENG_CV/ENG_CV.rtf';
-import docRuCV from '@assets/files/RU_CV/RU_CV.doc';
-import pdfRuCV from '@assets/files/RU_CV/RU_CV.pdf';
-import rtfRuCV from '@assets/files/RU_CV/RU_CV.rtf';
+import docEngCV from '@files/ENG_CV/ENG_CV.doc';
+import pdfEngCV from '@files/ENG_CV/ENG_CV.pdf';
+import rtfEngCV from '@files/ENG_CV/ENG_CV.rtf';
+import docRuCV from '@files/RU_CV/RU_CV.doc';
+import pdfRuCV from '@files/RU_CV/RU_CV.pdf';
+import rtfRuCV from '@files/RU_CV/RU_CV.rtf';
 import { Languages } from '@src/locales';
 import printJS from 'print-js';
 
