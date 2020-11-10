@@ -54,7 +54,7 @@ export const AboutMe: React.FC = () => {
     },
     {
       description: localedText('locationText'),
-      secondaryDescription: '',
+      secondaryDescription: localedText('locationPlace'),
       listAvatar: <LocationOn />,
     },
     {

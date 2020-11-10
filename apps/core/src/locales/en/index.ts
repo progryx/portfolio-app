@@ -1,6 +1,6 @@
 export const EN_LOCALE = {
   aboutMe: 'About me',
-  myProjects: 'My projects',
+  myProjects: 'Projects expamples',
   contactMe: 'Contact me:',
   gitHubProfile: 'GitHub profile',
   mailMe: 'Mail me',
@@ -10,13 +10,13 @@ export const EN_LOCALE = {
   messageSendFail: 'Message not sended :(',
   footerContent: 'Nikitin German. Frontend developer. 2014-2020',
   aboutMeText:
-    'Greetings! This is my personal portfolio application!\n' +
-    'My name is German and I am a middle frontend developer.\n' +
-    'This is a microservice application based on a monorepo!\n' +
-    'You can browse the source code of this application on my GitHub account.\n' +
-    'You can also check my development experience here and contact me if you are interested my CV.\n' +
-    'By the way, you can download it right here in any convenient format for you or print it in English or Russian languages\n' +
-    'I would appreciate any feedback and thank you for your interest in my CV! Have a nice day!',
+    'Welcome to my personal portfolio application!\n' +
+    'My name is Nikitin German and I am a middle frontend developer.\n \n' +
+    'This website - a microservice single page application!' +
+    'You can browse the source code of this application on my GitHub account. This is monorepo.\n \n' +
+    'Here you can check my development experience and contact with me if you are interested in my CV.' +
+    'By the way, you can download it right here in any convenient format for you or print it in English or Russian languages.\n \n' +
+    'I would appreciate any feedback. Have a nice day!',
   downloadMyCv: 'Download my CV',
   printMyCv: 'Print my CV',
   birthdateText: 'Birthdate',
@@ -30,7 +30,7 @@ export const EN_LOCALE = {
   webDevelopmentDescription:
     'Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large\n' +
     'companies (Alfa Bank, VTB, Gazprom) in the Agile team.Working as IP (as a remote employee under\n' +
-    'a work contract (contractor))',
+    'a work contract)',
   webDevelopmentMainDirections: 'Main directions',
   webDevelopmentSkillReact:
     'Development on React + Redux (SPA), Experience 2 years. (over 8 huge apps implemented)',
@@ -44,7 +44,7 @@ export const EN_LOCALE = {
   frontEndDevelopmentSkillJS:
     'JavaScript with modern specifications ES6-ES10, React, Redux (FLUX) + Async libs Saga/Thunk',
   frontEndDevelopmentSkillHTML:
-    'Advanced Layout: HTML, CSS with preprocessors (LESS / SASS) + Flex/Grid',
+    'Advanced Layout: HTML, CSS with pre and postprocessors (LESS / SASS / PostCSS) + Flex/Grid',
   frontEndDevelopmentSkillWebpack:
     'Modern project assembly methods. WebPack 4/5 (with Module Federation) and experience with large monorepo (over 15+ projects with libs and assets)',
   mySkillsLevel: 'My skills level',
@@ -53,8 +53,8 @@ export const EN_LOCALE = {
     'I have been doing commercial development for over 6 years. I started by creating\n' +
     'websites from scratch in web studios in 2014.',
   myExperienceDescription2:
-    'For the last year i have been working with large companies in international projects\n' +
-    '(VTB, Gazprom, Alfa Bank) in the development team.',
+    'For the last year i have been working with large companies in international projects' +
+    '(VTB, Gazprom, Alfa Bank) in the development team (6-14 ppl).',
   myExperienceDescription3:
     'I am working only under a work contract as an individual entrepreneur.',
   workExperienceWebStudioPosition: 'Web Master',
@@ -70,13 +70,13 @@ export const EN_LOCALE = {
   workExperienceMobilePosition: 'Mobile Web Developer',
   workExperienceMobileCompanyName: 'SHIFT Motors',
   workExperienceMobileDescription:
-    'Development of a company website (html / php / javascript), participation in a startup: developing android application. Application topic: Security alarm button for private guard company. GPS tracking of rapid response team. Stack in Frontend: knockout, html5,css3, less.',
+    'Development of a company website (html / php / javascript), participation in a startup: developing android application. Application topic: Security alarm button for private guard company. GPS tracking of rapid response team. Stack in Frontend: Knockout, HTML5, CSS3, LESS.',
 
   workExperienceIpPosition: 'Frontend Web Developer',
   workExperienceIpCompanyName: 'Individual entrepreneur Nikitin G.N.',
   workExperienceIpYears: '2017-Present time',
   workExperienceIpDescription:
-    'Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large companies (Alfa Bank, VTB, Gazprom) in the Agile team. Working as IP (as a remote employee under a work contract (contractor))',
+    'Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large companies (Alfa Bank, VTB, Gazprom) in the Agile team. Working as IP (as a remote employee under a work contract). In the present time more than 8 projects implemented to production.',
   myEducation: 'My Education',
   myEducationUniversityFac: 'Secure Information Technologies',
   myEducationUniversityName: 'ITMO University, Russia',
@@ -88,8 +88,8 @@ export const EN_LOCALE = {
   myEducationCoursesFac: 'Pre-profile training courses',
   myEducationCoursesName: 'SEGRIS Institute of Information Technologies, Russia',
   sendMeMessage: 'Send me a message!',
-  sendMeMessageDesc1: 'Are you going to create a greate app? I would like to help you with it!',
-  sendMeMessageDesc2: 'Just send me a message and i will contact you ASAP. Thank you ;)',
+  sendMeMessageDesc1: 'Are you going to create a greate app? \nI would like to help you with it!',
+  sendMeMessageDesc2: 'Just send me a message and i will contact you ASAP. \n\nThank you ;)',
   formNameLabel: 'Your name',
   formEmailLabel: 'Your e-mail',
   formMessageLabel: 'Your message',
