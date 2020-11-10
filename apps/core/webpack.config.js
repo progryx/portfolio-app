@@ -20,6 +20,7 @@ module.exports = (_env = {}, { mode }) => {
       },
     }),
     new HtmlWebpackPlugin({
+      isProduction: isProduction,
       template: './public/index.html',
       favicon: './public/favicon.ico',
     }),
@@ -128,14 +129,13 @@ module.exports = (_env = {}, { mode }) => {
           ],
         },
         {
-          test: /\.(docx|doc|rtf|txt)$/i,
+          test: /\.(docx|doc|rtf|txt|woff|woff2|eot|ttf)$/i,
           use: [
             {
               loader: 'url-loader',
             },
           ],
         },
-        { test: /\.(woff|woff2|eot|ttf)$/, use: ['url-loader?limit=100000'] },
         { test: /\.(pdf)$/, use: ['file-loader'] },
       ],
     },
