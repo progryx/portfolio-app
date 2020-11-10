@@ -36,7 +36,7 @@ module.exports = (_env = {}, { mode }) => {
         react: {
           eager: true,
           singleton: true,
-          version: '17.0.1',
+          version: '16.11.0',
         },
         'react-dom': {
           eager: true,

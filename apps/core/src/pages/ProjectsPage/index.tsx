@@ -2,7 +2,8 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import TaskDashboard from '@assets/images/task_dashboard.jpg';
-import TimerImage from '@assets/images/timer.png';
+import TimerImage from '@assets/images/timer.jpg';
+import UsersTable from '@assets/images/users_table.png';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Code } from '@material-ui/icons';
 import { ROUTES_MAP } from '@src/constants';
@@ -23,6 +24,14 @@ export const ProjectsPage: React.FC = () => {
       imageSrc: TimerImage,
       stack: 'Typescript, React, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.timer),
+    },
+    {
+      name: localedText('projectsUsersTable'),
+      description: localedText('projectsUsersTableDescription'),
+      icon: <Code />,
+      imageSrc: UsersTable,
+      stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
+      openProjectHandler: () => history.push(ROUTES_MAP.usersTable),
     },
     {
       name: localedText('projectsTaskDashboard'),
@@ -46,7 +55,7 @@ export const ProjectsPage: React.FC = () => {
           <Grid container>
             {projects.map(
               ({ name, description, icon, stack, imageSrc, openProjectHandler }, index) => (
-                <Grid item xs={4} key={index}>
+                <Grid item xs={6} key={index}>
                   <ProjectItem
                     name={name}
                     description={description}

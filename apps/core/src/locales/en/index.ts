@@ -104,4 +104,7 @@ export const EN_LOCALE = {
   projectsTaskDashboardDescription:
     'Real task dashboard with drag and drop function, like Jira or Miro.\n' +
     'You can drag elements(tasks) between columns, but you can not disrupt the workflow. For example, you can drop "TODO" to "DEV", but not "TODO" to "RFT" or "PROD".',
+  projectsUsersTable: 'Users Table',
+  projectsUsersTableDescription:
+    'Simple table of users. You can select one ore more users and it selected users are displayed at the bottom',
 };

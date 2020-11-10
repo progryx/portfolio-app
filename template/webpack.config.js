@@ -29,6 +29,7 @@ module.exports = () => {
         react: {
           eager: true,
           singleton: true,
+          version: '16.11.0',
         },
         'react-dom': {
           eager: true,

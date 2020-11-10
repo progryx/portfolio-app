@@ -20,5 +20,9 @@ export const useRoutesMap = () => {
       url: '/projects/dashboard',
       name: localedText('projectsTaskDashboard'),
     },
+    users: {
+      url: '/projects/users',
+      name: localedText('projectsUsersTable'),
+    },
   };
 };

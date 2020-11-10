@@ -10,8 +10,9 @@ import { MainPage } from './pages/MainPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 
 /** APPLICATIONS */
-const TimerApp = React.lazy(() => import('timer/TimerApp'));
+const Timer = React.lazy(() => import('timer/TimerApp'));
 const TaskDashboard = React.lazy(() => import('dashboard/TaskDashboard'));
+const UsersTable = React.lazy(() => import('users/UsersTable'));
 
 export const Root: React.FC = () => {
   return (
@@ -26,10 +27,13 @@ export const Root: React.FC = () => {
               <ProjectsPage />
             </Route>
             <Route path={ROUTES_MAP.timer} exact>
-              <TimerApp />
+              <Timer />
             </Route>
             <Route path={ROUTES_MAP.taskDashboard} exact>
               <TaskDashboard />
+            </Route>
+            <Route path={ROUTES_MAP.usersTable} exact>
+              <UsersTable />
             </Route>
           </Switch>
         </Layout>

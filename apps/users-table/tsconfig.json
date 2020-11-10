@@ -14,18 +14,10 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
       "@reducers/*": ["./src/reducers/*"],
-      "@locales/*": ["./src/locales/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utilities/*": ["src/utilities/*"],
-      "@assets/*": ["./assets/*"],
-      "timer/*": ["../timer/exports/*"],
-      "dashboard/*": ["../task-dashboard/exports/*"],
-      "users/*": ["../users-table/exports/*"],
+      "@components/*": ["./src/components/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["./**/*"]
+  "include": ["**/*"]
 }
