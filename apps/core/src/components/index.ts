@@ -7,3 +7,4 @@ export * from './Layout';
 export * from './List';
 export * from './ProgressBar';
 export * from './Toast';
+export * from './Logo';

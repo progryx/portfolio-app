@@ -11,7 +11,7 @@ export const MainPage: React.FC = () => {
 
   return (
     <>
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" justify="center">
         <PersonalInfo />
         <Content />
       </Grid>

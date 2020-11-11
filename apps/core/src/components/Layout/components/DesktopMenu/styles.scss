@@ -1,0 +1,13 @@
+@import '~@portfolio-app/styles/src/properties/spacing';
+
+.desktopMenu {
+     &__items {
+          display: flex;
+          flex: 1;
+          margin-left: $space_m;
+
+          a, button {
+               margin-right: $space_xs;
+          }
+     }
+}

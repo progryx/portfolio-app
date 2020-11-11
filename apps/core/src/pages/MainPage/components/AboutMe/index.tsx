@@ -7,7 +7,7 @@ import { coreSelectors } from '@reducers/core';
 import { useSelector } from '@reducers/store';
 import { Anchor, List, ListItem } from '@src/components';
 import { DropdownMenu, MenuItem } from '@src/components/DropdownMenu';
-import { useLocale } from '@src/hooks';
+import { useLocale, useWindowSize } from '@src/hooks';
 
 import { downloadCV, printCV } from './helpers';
 import styles from './styles.scss';
@@ -46,6 +46,10 @@ export const AboutMe: React.FC = () => {
   const localedText = useLocale();
   const isEnLocale = useSelector(coreSelectors.isEnLanguage);
 
+  const { isMobile, isTablet } = useWindowSize();
+
+  const actionButtonsWidthRate = isMobile || isTablet ? 12 : 6;
+
   const aboutMeInfo: ListItem[] = [
     {
       description: localedText('birthdateText'),
@@ -79,7 +83,7 @@ export const AboutMe: React.FC = () => {
       <Divider />
       <Box component="div" m={1} p={1}>
         <Grid container alignItems="baseline">
-          <Grid item xs={6}>
+          <Grid item xs={actionButtonsWidthRate}>
             <Box m={1} p={1}>
               <Typography variant="h6" color="textPrimary" component="p">
                 {localedText('aboutMe')}:
@@ -89,7 +93,7 @@ export const AboutMe: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={actionButtonsWidthRate}>
             <Box m={1} p={1}>
               <DropdownMenu
                 items={isEnLocale ? downloadEngCvItems : downloadRuCvItems}

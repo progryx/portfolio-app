@@ -66,8 +66,8 @@ export const MyExperience: React.FC = React.memo(() => {
       <Anchor id="experience" />
       <Typography variant="h4">{localedText('myExperience')}</Typography>
       <Box m={1} p={1}>
-        <Grid container alignItems="center">
-          <Grid item xs={4}>
+        <Grid container alignItems="center" justify="center">
+          <Grid item xs={12} md={4}>
             <Box p={1}>
               <img
                 src={WebDevelopment}
@@ -85,7 +85,7 @@ export const MyExperience: React.FC = React.memo(() => {
               <Typography align="justify">{localedText('myExperienceDescription3')}</Typography>
             </Box>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             <List items={WorkExperience} />
           </Grid>
         </Grid>

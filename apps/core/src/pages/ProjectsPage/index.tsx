@@ -55,7 +55,7 @@ export const ProjectsPage: React.FC = () => {
           <Grid container>
             {projects.map(
               ({ name, description, icon, stack, imageSrc, openProjectHandler }, index) => (
-                <Grid item xs={6} key={index}>
+                <Grid item xs={12} md={6} key={index}>
                   <ProjectItem
                     name={name}
                     description={description}

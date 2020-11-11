@@ -15,7 +15,7 @@ import {
 import { coreActions, coreSelectors } from '@reducers/core';
 import { useDispatch, useSelector } from '@reducers/store';
 import { EMAIL_JS, GOOGLE_API_KEY } from '@src/constants';
-import { useLocale } from '@src/hooks';
+import { useLocale, useWindowSize } from '@src/hooks';
 import { GetFormKeys, validation } from '@src/utilities';
 import cn from 'classnames';
 import emailjs from 'emailjs-com';
@@ -24,13 +24,10 @@ import { Formik } from 'formik';
 import styles from './styles.scss';
 import { createTextField } from './FormItem';
 
-type FormLayoutTypes = 'inline' | 'basic';
-
 type Props = {
   withSpacings?: boolean;
   formHeading?: string;
   formHeadingType?: TypographyTypeMap['props']['variant'];
-  formLaylout?: FormLayoutTypes;
   messageRows?: number;
   formClassName?: string;
 };
@@ -85,7 +82,6 @@ export const ContactForm: React.FC<Props> = ({
   withSpacings = true,
   formHeading,
   formHeadingType = 'body1',
-  formLaylout = 'basic',
   messageRows = 5,
   formClassName,
 }) => {
@@ -99,7 +95,9 @@ export const ContactForm: React.FC<Props> = ({
 
   const isEnLanguage = useSelector(coreSelectors.isEnLanguage);
 
-  const isBasicLayout = formLaylout === 'basic';
+  const { isMobile, isTablet, isSmallDesktop, isMediumDesktop } = useWindowSize();
+
+  const isSmallResolution = isMobile || isTablet || isSmallDesktop;
 
   const captchaCheckHandler = () => setIsDisabledSubmit(false);
   const handleSubmitForm = async ({ email, firstName, message }: typeof initialFormValues) => {
@@ -138,7 +136,7 @@ export const ContactForm: React.FC<Props> = ({
           <form onSubmit={handleSubmit}>
             <FormControl className={cn(formClassName, styles.contactForm)}>
               <Grid container>
-                <Grid item xs={isBasicLayout ? 5 : 12}>
+                <Grid item xs={12} md={5}>
                   <Box m={1}>
                     {createTextField<ContactFormValues>({
                       name: 'firstName',
@@ -157,7 +155,7 @@ export const ContactForm: React.FC<Props> = ({
                       className: styles.contactForm__inputText,
                     })}
                   </Box>
-                  {isBasicLayout && (
+                  {!isSmallResolution && (
                     <FormControls
                       isLoading={isLoading}
                       capchaCheckHandler={captchaCheckHandler}
@@ -165,7 +163,7 @@ export const ContactForm: React.FC<Props> = ({
                     />
                   )}
                 </Grid>
-                <Grid item xs={isBasicLayout ? 7 : 12}>
+                <Grid item xs={12} md={7}>
                   <Box m={1}>
                     {createTextField<ContactFormValues>({
                       name: 'message',
@@ -177,15 +175,15 @@ export const ContactForm: React.FC<Props> = ({
                       className: styles.contactForm__inputText,
                     })}
                   </Box>
+                  {isSmallResolution && (
+                    <FormControls
+                      isLoading={isLoading}
+                      capchaCheckHandler={captchaCheckHandler}
+                      isDisabledSubmit={isDisabledSubmit}
+                    />
+                  )}
                 </Grid>
               </Grid>
-              {!isBasicLayout && (
-                <FormControls
-                  isLoading={isLoading}
-                  capchaCheckHandler={captchaCheckHandler}
-                  isDisabledSubmit={isDisabledSubmit}
-                />
-              )}
             </FormControl>
           </form>
         )}

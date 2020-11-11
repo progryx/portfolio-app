@@ -11,8 +11,8 @@ export const ContactMe: React.FC = React.memo(() => {
     <Box component="div" display="flex" flexDirection="column">
       <Typography variant="h4">{localedText('sendMeMessage')}</Typography>
 
-      <Grid container alignItems="center">
-        <Grid item xs={4}>
+      <Grid container alignItems="center" justify="center">
+        <Grid item xs={12} md={4}>
           <Box p={1}>
             <Typography align="justify">{localedText('sendMeMessageDesc1')}</Typography>
           </Box>
@@ -20,7 +20,7 @@ export const ContactMe: React.FC = React.memo(() => {
             <Typography align="justify">{localedText('sendMeMessageDesc2')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12} md={8}>
           <ContactForm messageRows={9} />
         </Grid>
       </Grid>
