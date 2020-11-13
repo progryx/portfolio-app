@@ -19,4 +19,9 @@ module.exports = {
         devUrl: "http://localhost:3003/",
         prodUrl: "https://gnikitin.ru/users/",
     },
+    quiz: {
+        port: 3004,
+        devUrl: "http://localhost:3004/",
+        prodUrl: "https://gnikitin.ru/quiz/",
+    },
 }

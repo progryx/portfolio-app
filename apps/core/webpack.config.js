@@ -32,6 +32,7 @@ module.exports = (_env = {}, { mode }) => {
         timer: 'timer',
         dashboard: 'dashboard',
         users: 'users',
+        quiz: 'quiz',
       },
       exposes: require('./exports.json'),
       shared: {

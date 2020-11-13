@@ -1,6 +1,6 @@
+import { PropertiesTypes } from '@portfolio-app/utilities';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Languages, LANG_NAMES } from '@src/locales';
-import { PropertiesTypes } from '@src/utilities';
 
 import { RootState } from '../index';
 

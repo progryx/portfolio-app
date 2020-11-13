@@ -1,5 +1,7 @@
+import { InferActionTypes } from '@portfolio-app/utilities';
+
 import { MockData } from '../mockData';
-import { InferActionTypes, RootState } from '../store';
+import { RootState } from '../store';
 
 type ActionTypes = InferActionTypes<typeof actions>;
 
@@ -26,7 +28,7 @@ export const actions = {
 export const mainSelectors = {
   getTableData: (state: RootState) => state.mainPage.table,
   getServerMessage: (state: RootState) => state.mainPage.serverMessage,
-}
+};
 
 const initialState: {
   table: TableData;

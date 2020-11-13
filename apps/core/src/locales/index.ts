@@ -1,4 +1,4 @@
-import { GetFormKeys } from '@src/utilities';
+import { GetFormKeys } from '@portfolio-app/utilities';
 
 import { EN_LOCALE } from './en';
 import { RU_LOCALE } from './ru';

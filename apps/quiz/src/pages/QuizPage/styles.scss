@@ -1,0 +1,14 @@
+@import '~@portfolio-app/styles/src/mixins/font-mixins';
+@import '~@portfolio-app/styles/src/properties/sizes';
+@import '~@portfolio-app/styles/src/properties/spacing';
+
+.quizPage {
+  
+  &__container {
+    min-height: 80vh;
+  }
+
+  &__progress {
+    margin-top: $space_xl
+  }
+}

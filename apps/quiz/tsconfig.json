@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react",
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@steps/*": ["./src/steps/*"],
+      "@reducers/*": ["./src/reducers/*"],
+      "@locales/*": ["./src/locales/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utilities/*": ["src/utilities/*"],
+      "@assets/*": ["./assets/*"],
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["./**/*"]
+}

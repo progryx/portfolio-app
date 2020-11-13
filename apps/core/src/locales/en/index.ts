@@ -107,4 +107,7 @@ export const EN_LOCALE = {
   projectsUsersTable: 'Users Table',
   projectsUsersTableDescription:
     'Simple table of users. You can select one ore more users and it selected users are displayed at the bottom',
+  projectsQuiz: 'Quiz application',
+  projectQuizDescription:
+    'Real quiz with feedback and result at the end! Go through the Quiz and know you result!',
 };

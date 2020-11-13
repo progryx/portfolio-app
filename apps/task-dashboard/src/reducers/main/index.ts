@@ -1,6 +1,7 @@
-import { generateId, isColumnStatusValidForDrop } from '@src/helpers';
+import { generateId, InferActionTypes } from '@portfolio-app/utilities';
+import { isColumnStatusValidForDrop } from '@src/helpers';
 
-import { InferActionTypes, RootState } from '../store';
+import { RootState } from '../store';
 import { CardData, Cards, DashboardData, MoveCardParams, statuses } from '../types';
 
 type ActionTypes = InferActionTypes<typeof mainActions>;

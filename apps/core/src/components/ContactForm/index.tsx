@@ -12,11 +12,12 @@ import {
   Typography,
   TypographyTypeMap,
 } from '@material-ui/core';
+import { GetFormKeys } from '@portfolio-app/utilities';
 import { coreActions, coreSelectors } from '@reducers/core';
 import { useDispatch, useSelector } from '@reducers/store';
 import { EMAIL_JS, GOOGLE_API_KEY } from '@src/constants';
 import { useLocale, useWindowSize } from '@src/hooks';
-import { GetFormKeys, validation } from '@src/utilities';
+import { validation } from '@src/utilities';
 import cn from 'classnames';
 import emailjs from 'emailjs-com';
 import { Formik } from 'formik';
@@ -95,7 +96,7 @@ export const ContactForm: React.FC<Props> = ({
 
   const isEnLanguage = useSelector(coreSelectors.isEnLanguage);
 
-  const { isMobile, isTablet, isSmallDesktop, isMediumDesktop } = useWindowSize();
+  const { isMobile, isTablet, isSmallDesktop } = useWindowSize();
 
   const isSmallResolution = isMobile || isTablet || isSmallDesktop;
 

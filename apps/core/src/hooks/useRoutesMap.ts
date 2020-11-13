@@ -24,5 +24,9 @@ export const useRoutesMap = () => {
       url: '/projects/users',
       name: localedText('projectsUsersTable'),
     },
+    quiz: {
+      url: '/projects/quiz',
+      name: localedText('projectsQuiz'),
+    },
   };
 };

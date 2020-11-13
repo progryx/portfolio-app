@@ -13,6 +13,7 @@ import { ProjectsPage } from './pages/ProjectsPage';
 const Timer = React.lazy(() => import('timer/TimerApp'));
 const TaskDashboard = React.lazy(() => import('dashboard/TaskDashboard'));
 const UsersTable = React.lazy(() => import('users/UsersTable'));
+const Quiz = React.lazy(() => import('quiz/QuizApp'));
 
 export const Root: React.FC = () => {
   return (
@@ -34,6 +35,9 @@ export const Root: React.FC = () => {
             </Route>
             <Route path={ROUTES_MAP.usersTable} exact>
               <UsersTable />
+            </Route>
+            <Route path={ROUTES_MAP.quiz} exact>
+              <Quiz />
             </Route>
           </Switch>
         </Layout>

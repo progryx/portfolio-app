@@ -1,7 +1,7 @@
-import { isTruthy } from '@portfolio-app/utilities';
+import { isTruthy, PropertiesTypes } from '@portfolio-app/utilities';
 import { ContactFormFields } from '@src/components';
 
-import { isValidEmail, PropertiesTypes } from '..';
+import { isValidEmail } from '..';
 
 import { ERRORS } from './constants';
 

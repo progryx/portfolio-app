@@ -1,0 +1,9 @@
+@import '~@portfolio-app/styles/src/properties/sizes';
+@import '~@portfolio-app/styles/src/properties/spacing';
+
+
+.quizItem {
+  &__image {
+    min-height: $base * 125;
+  }
+}

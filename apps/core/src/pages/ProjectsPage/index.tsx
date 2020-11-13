@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import Quiz from '@assets/images/quiz.jpg';
 import TaskDashboard from '@assets/images/task_dashboard.jpg';
 import TimerImage from '@assets/images/timer.jpg';
 import UsersTable from '@assets/images/users_table.png';
@@ -40,6 +41,14 @@ export const ProjectsPage: React.FC = () => {
       imageSrc: TaskDashboard,
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.taskDashboard),
+    },
+    {
+      name: localedText('projectsQuiz'),
+      description: localedText('projectQuizDescription'),
+      icon: <Code />,
+      imageSrc: Quiz,
+      stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
+      openProjectHandler: () => history.push(ROUTES_MAP.quiz),
     },
   ];
 

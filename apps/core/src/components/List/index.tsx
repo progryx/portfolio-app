@@ -43,7 +43,7 @@ export const List: React.FC<Props> = ({ items }) => {
           };
 
           return (
-            <ListItem>
+            <ListItem key={index}>
               {Icon && <MListItemIcon className={iconClassname}>{Icon}</MListItemIcon>}
               {listAvatar && (
                 <MListItemAvatar>
