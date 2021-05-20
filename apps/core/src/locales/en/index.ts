@@ -8,7 +8,7 @@ export const EN_LOCALE = {
   greetingsHeader: 'Hello, My name is German',
   messageSended: 'Message successfully sended!',
   messageSendFail: 'Message not sended :(',
-  footerContent: 'Nikitin German. Frontend developer. 2014-2020',
+  footerContent: 'Nikitin German. Frontend developer. 2014-2021',
   aboutMeText:
     'Welcome to my personal portfolio application!\n' +
     'My name is Nikitin German and I am a middle frontend developer.\n \n' +
@@ -33,7 +33,7 @@ export const EN_LOCALE = {
     'a work contract)',
   webDevelopmentMainDirections: 'Main directions',
   webDevelopmentSkillReact:
-    'Development on React + Redux (SPA), Experience 2 years. (over 8 huge apps implemented)',
+    'Development on React + Redux (SPA), Experience 3 years. (over 8 huge apps implemented)',
   webDevelopmentSkillLayout:
     'Website development on HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix from scratch.',
   webDevelopmentSkillIS: 'Development of enterprise security systems, threat analysis.',
