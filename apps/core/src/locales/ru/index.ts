@@ -8,7 +8,7 @@ export const RU_LOCALE = {
   greetingsHeader: 'Здравствуйте, меня зовут Герман',
   messageSended: 'Сообщение отправлено!',
   messageSendFail: 'Сообщение не было отправлено :(',
-  footerContent: 'Никитин Герман. Frontend разработчик. 2014-2020',
+  footerContent: 'Никитин Герман. Frontend разработчик. 2014-2021',
   aboutMeText:
     'Добро пожаловать на мое приложение-портфолио!\n' +
     'Меня зовут Никитин Герман и я middle frontend разработчик.\n \n' +
@@ -32,7 +32,7 @@ export const RU_LOCALE = {
     'компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. Работаю по ИП (как удаленный сотрудник по договору подряда).',
   webDevelopmentMainDirections: 'Основные направления',
   webDevelopmentSkillReact:
-    'Разработка на React + Redux (SPA), опыт 2 года (реализовано более 8 прод. приложений)',
+    'Разработка на React + Redux (SPA), опыт 3 года (реализовано более 10 прод. приложений)',
   webDevelopmentSkillLayout:
     'Разработка сайтов на HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix с нуля.',
   webDevelopmentSkillIS: 'Разработка систем безопасности предприятия, анализ угроз.',
