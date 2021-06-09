@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Education from '@assets/images/education.png';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Anchor, List, ListItem } from '@src/components';
 import { useLocale } from '@src/hooks';
+import { getAsset } from '@src/utilities';
 
 import styles from './styles.scss';
 
@@ -59,7 +59,11 @@ export const MyEducation: React.FC = React.memo(() => {
           </Grid>
           <Grid item xs={12} md={4}>
             <Box p={1} display="flex" justifyContent="center">
-              <img src={Education} alt="Education" className={styles.myEducation__eImage} />
+              <img
+                src={getAsset('education.png')}
+                alt="Education"
+                className={styles.myEducation__eImage}
+              />
             </Box>
           </Grid>
         </Grid>

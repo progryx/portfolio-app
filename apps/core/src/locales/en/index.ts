@@ -11,7 +11,7 @@ export const EN_LOCALE = {
   footerContent: 'Nikitin German. Frontend developer. 2014-2021',
   aboutMeText:
     'Welcome to my personal portfolio application!\n' +
-    'My name is Nikitin German and I am a middle frontend developer.\n \n' +
+    'My name is Nikitin German and I am a senior frontend developer.\n \n' +
     'This website - a microservice single page application!' +
     'You can browse the source code of this application on my GitHub account. This is monorepo.\n \n' +
     'Here you can check my development experience and contact with me if you are interested in my CV.' +
