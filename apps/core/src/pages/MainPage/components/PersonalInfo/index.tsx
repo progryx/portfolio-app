@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Avatar from '@assets/images/big_avatar.jpg';
 import { Box, Card, CardContent, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import { GithubIcon, GmailIcon, SkypeBusinessIcon } from '@portfolio-app/icons';
 import { ContactLink } from '@src/components/ContactLink';
 import { useLocale, useWindowSize } from '@src/hooks';
+import { getAsset } from '@src/utilities';
 
 import { AboutMe } from '../AboutMe';
 
@@ -23,7 +23,7 @@ export const PersonalInfo: React.FC = () => {
       <Grid item xs={avatarBlockWidthRate} md={4}>
         <Box component="div" m={1} p={1}>
           <Card>
-            <CardMedia image={Avatar} className={styles.personalInfo__photo} />
+            <CardMedia image={getAsset('big_avatar.jpg')} className={styles.personalInfo__photo} />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 {localedText('contactMe')}

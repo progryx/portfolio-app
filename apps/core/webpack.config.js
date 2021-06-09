@@ -65,6 +65,13 @@ module.exports = (_env = {}, { mode }) => {
       contentBase: path.join(__dirname, 'dist'),
       port: links.core.port,
       historyApiFallback: true,
+      proxy: {
+        '/files': {
+          target: 'https://gnikitin.ru',
+          secure: true,
+          changeOrigin: true,
+        },
+      },
     },
     output: {
       publicPath: isProduction ? links.core.prodUrl : links.core.devUrl,
@@ -122,22 +129,13 @@ module.exports = (_env = {}, { mode }) => {
           use: ['@svgr/webpack'],
         },
         {
-          test: /\.(jpeg|jpg|png)$/i,
+          test: /\.(woff|woff2|eot|ttf)$/i,
           use: [
             {
               loader: 'url-loader',
             },
           ],
         },
-        {
-          test: /\.(docx|doc|rtf|txt|woff|woff2|eot|ttf)$/i,
-          use: [
-            {
-              loader: 'url-loader',
-            },
-          ],
-        },
-        { test: /\.(pdf)$/, use: ['file-loader'] },
       ],
     },
     plugins: plugins,

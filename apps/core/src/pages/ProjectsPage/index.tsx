@@ -1,14 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Quiz from '@assets/images/quiz.jpg';
-import TaskDashboard from '@assets/images/task_dashboard.jpg';
-import TimerImage from '@assets/images/timer.jpg';
-import UsersTable from '@assets/images/users_table.png';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Code } from '@material-ui/icons';
 import { ROUTES_MAP } from '@src/constants';
 import { useLocale } from '@src/hooks';
+import { getAsset } from '@src/utilities';
 
 import { ProjectItem, ProjectsItem } from './components/ProjectItem';
 
@@ -22,7 +19,7 @@ export const ProjectsPage: React.FC = () => {
       name: localedText('projectsTimerName'),
       description: localedText('projectsTimerDescription'),
       icon: <Code />,
-      imageSrc: TimerImage,
+      imageSrc: getAsset('timer.jpg'),
       stack: 'Typescript, React, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.timer),
     },
@@ -30,7 +27,7 @@ export const ProjectsPage: React.FC = () => {
       name: localedText('projectsUsersTable'),
       description: localedText('projectsUsersTableDescription'),
       icon: <Code />,
-      imageSrc: UsersTable,
+      imageSrc: getAsset('users_table.png'),
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.usersTable),
     },
@@ -38,7 +35,7 @@ export const ProjectsPage: React.FC = () => {
       name: localedText('projectsTaskDashboard'),
       description: localedText('projectsTaskDashboardDescription'),
       icon: <Code />,
-      imageSrc: TaskDashboard,
+      imageSrc: getAsset('task_dashboard.jpg'),
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.taskDashboard),
     },
@@ -46,7 +43,7 @@ export const ProjectsPage: React.FC = () => {
       name: localedText('projectsQuiz'),
       description: localedText('projectQuizDescription'),
       icon: <Code />,
-      imageSrc: Quiz,
+      imageSrc: getAsset('quiz.jpg'),
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.quiz),
     },

@@ -1,10 +1,5 @@
-import docEngCV from '@assets/files/ENG_CV/ENG_CV.doc';
-import pdfEngCV from '@assets/files/ENG_CV/ENG_CV.pdf';
-import rtfEngCV from '@assets/files/ENG_CV/ENG_CV.rtf';
-import docRuCV from '@assets/files/RU_CV/RU_CV.doc';
-import pdfRuCV from '@assets/files/RU_CV/RU_CV.pdf';
-import rtfRuCV from '@assets/files/RU_CV/RU_CV.rtf';
 import { Languages } from '@src/locales';
+import { getAsset } from '@src/utilities';
 import printJS from 'print-js';
 
 type Extensions = 'doc' | 'pdf' | 'rtf';
@@ -14,15 +9,15 @@ export const downloadCV = (lang: Languages, extension: Extensions) => {
 
   switch (extension) {
     case 'doc': {
-      return window.open(isEnLang ? docEngCV : docRuCV, '_self');
+      return window.open(isEnLang ? getAsset('ENG_CV.doc') : getAsset('RU_CV.doc'), '_self');
     }
 
     case 'pdf': {
-      return window.open(isEnLang ? pdfEngCV : pdfRuCV, '_blank');
+      return window.open(isEnLang ? getAsset('ENG_CV.pdf') : getAsset('RU_CV.pdf'), '_blank');
     }
 
     case 'rtf': {
-      return window.open(isEnLang ? rtfEngCV : rtfRuCV, '_self');
+      return window.open(isEnLang ? getAsset('ENG_CV.rtf') : getAsset('RU_CV.rtf'), '_self');
     }
 
     default: {
@@ -35,7 +30,7 @@ export const printCV = (lang: Languages) => {
   const isEnLang = lang === 'EN';
 
   printJS({
-    printable: isEnLang ? pdfEngCV : pdfRuCV,
+    printable: isEnLang ? getAsset('ENG_CV.pdf') : getAsset('RU_CV.pdf'),
     showModal: true,
     type: 'pdf',
   });
