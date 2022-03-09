@@ -9,3 +9,9 @@
     margin-top: $space_s;
   }
 }
+
+#personalInfo {
+  &__photo {
+    background-position: 75% 0;
+  }
+}

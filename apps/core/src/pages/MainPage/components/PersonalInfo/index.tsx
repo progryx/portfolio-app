@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Card, CardContent, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
-import { GithubIcon, GmailIcon, SkypeBusinessIcon } from '@portfolio-app/icons';
+import { GithubIcon, GmailIcon, SkypeBusinessIcon, TelegramIcon } from '@portfolio-app/icons';
 import { ContactLink } from '@src/components/ContactLink';
 import { useLocale, useWindowSize } from '@src/hooks';
 import { getAsset } from '@src/utilities';
@@ -23,7 +23,11 @@ export const PersonalInfo: React.FC = () => {
       <Grid item xs={avatarBlockWidthRate} md={4}>
         <Box component="div" m={1} p={1}>
           <Card>
-            <CardMedia image={getAsset('big_avatar.jpg')} className={styles.personalInfo__photo} />
+            <CardMedia
+              id={styles.personalInfo__photo}
+              image={getAsset('big_avatar.jpg')}
+              className={styles.personalInfo__photo}
+            />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 {localedText('contactMe')}
@@ -33,9 +37,9 @@ export const PersonalInfo: React.FC = () => {
 
               <Box component="div" m={1} p={1}>
                 <ContactLink
-                  contactHref="https://github.com/progryx"
-                  contactText={localedText('gitHubProfile')}
-                  Icon={GithubIcon}
+                  contactHref="https://t.me/progryx"
+                  contactText={localedText('telegramProfile')}
+                  Icon={TelegramIcon}
                 />
                 <ContactLink
                   contactHref="mailto:progryx@gmail.com"
@@ -46,6 +50,11 @@ export const PersonalInfo: React.FC = () => {
                   contactHref="https://join.skype.com/invite/oCBgwlpIzsep"
                   contactText={localedText('skypeMe')}
                   Icon={SkypeBusinessIcon}
+                />
+                <ContactLink
+                  contactHref="https://github.com/progryx"
+                  contactText={localedText('gitHubProfile')}
+                  Icon={GithubIcon}
                 />
               </Box>
             </CardContent>
