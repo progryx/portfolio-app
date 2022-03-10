@@ -1,14 +1,15 @@
 export const EN_LOCALE = {
   aboutMe: 'About me',
-  myProjects: 'Projects expamples',
+  myProjects: 'Test tasks',
   contactMe: 'Contact me:',
   gitHubProfile: 'GitHub profile',
+  telegramProfile: 'Telegram profile',
   mailMe: 'Mail me',
   skypeMe: 'Contact me with Skype',
   greetingsHeader: 'Hello, My name is German',
   messageSended: 'Message successfully sended!',
   messageSendFail: 'Message not sended :(',
-  footerContent: 'Nikitin German. Frontend developer. 2014-2021',
+  footerContent: 'Nikitin German. Frontend developer. 2014-2022',
   aboutMeText:
     'Welcome to my personal portfolio application!\n' +
     'My name is Nikitin German and I am a senior frontend developer.\n \n' +
@@ -20,7 +21,7 @@ export const EN_LOCALE = {
   downloadMyCv: 'Download my CV',
   printMyCv: 'Print my CV',
   birthdateText: 'Birthdate',
-  birthDateInfo: 'Aug 4, 1994 (26 y.o)',
+  birthDateInfo: 'Aug 4, 1994 (27 y.o)',
   locationText: 'Location',
   locationPlace: 'Saint-Petersburg, Russia',
   educationText: 'Education',
@@ -33,7 +34,7 @@ export const EN_LOCALE = {
     'a work contract)',
   webDevelopmentMainDirections: 'Main directions',
   webDevelopmentSkillReact:
-    'Development on React + Redux (SPA), Experience 3 years. (over 8 huge apps implemented)',
+    'Development on React + Redux (SPA), Experience 4 years. (over 8 huge apps implemented)',
   webDevelopmentSkillLayout:
     'Website development on HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix from scratch.',
   webDevelopmentSkillIS: 'Development of enterprise security systems, threat analysis.',
@@ -42,15 +43,16 @@ export const EN_LOCALE = {
     'Confident knowledge of modern methods and technologies of front-end development.',
   frontEndDevelopmentMainSkills: 'Main skills',
   frontEndDevelopmentSkillJS:
-    'JavaScript with modern specifications ES6-ES10, React, Redux (FLUX) + Async libs Saga/Thunk',
+    'JavaScript and Typescript with modern specifications ES6-ES12, React, Redux (FLUX) + Async libs Saga/Thunk.' +
+    'Deep understanding of the TypeScript language with advanced types, unions and selecting from it (type guards), conditional types, overloads, utility types including custom types',
   frontEndDevelopmentSkillHTML:
     'Advanced Layout: HTML, CSS with pre and postprocessors (LESS / SASS / PostCSS) + Flex/Grid',
   frontEndDevelopmentSkillWebpack:
-    'Modern project assembly methods. WebPack 4/5 (with Module Federation) and experience with large monorepo (over 15+ projects with libs and assets)',
+    'Modern project assembly methods. WebPack 4/5 (with Module Federation) and experience with large monorepo (over 40+ projects with libs and assets)',
   mySkillsLevel: 'My skills level',
   myExperience: 'My Experience',
   myExperienceDescription1:
-    'I have been doing commercial development for over 6 years. I started by creating\n' +
+    'I have been doing commercial development for over 8 years. I started by creating\n' +
     'websites from scratch in web studios in 2014.',
   myExperienceDescription2:
     'For the last year i have been working with large companies in international projects' +

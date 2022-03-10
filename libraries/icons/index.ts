@@ -10,3 +10,4 @@ export * from "./icons/sass";
 export * from "./icons/github";
 export * from "./icons/skype";
 export * from "./icons/webpack";
+export * from './icons/telegram'

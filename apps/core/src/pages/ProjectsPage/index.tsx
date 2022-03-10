@@ -39,14 +39,6 @@ export const ProjectsPage: React.FC = () => {
       stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
       openProjectHandler: () => history.push(ROUTES_MAP.taskDashboard),
     },
-    {
-      name: localedText('projectsQuiz'),
-      description: localedText('projectQuizDescription'),
-      icon: <Code />,
-      imageSrc: getAsset('quiz.jpg'),
-      stack: 'Typescript, React, Redux, Redux-Saga, Material UI',
-      openProjectHandler: () => history.push(ROUTES_MAP.quiz),
-    },
   ];
 
   return (

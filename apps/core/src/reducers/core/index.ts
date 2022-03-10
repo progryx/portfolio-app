@@ -13,7 +13,7 @@ export type CoreState = {
 
 export const initialState: CoreState = {
   toastMessage: null,
-  language: 'EN',
+  language: 'RU',
 };
 
 export const coreSlice = createSlice({

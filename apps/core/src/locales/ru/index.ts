@@ -1,14 +1,15 @@
 export const RU_LOCALE = {
   aboutMe: 'Обо мне',
-  myProjects: 'Примеры проектов',
+  myProjects: 'Тестовые задания',
   contactMe: 'Связь со мной:',
   gitHubProfile: 'GitHub репозиторий',
+  telegramProfile: 'Профиль в Телеграм',
   mailMe: 'Электронная почта',
   skypeMe: 'Связь по Skype',
   greetingsHeader: 'Здравствуйте, меня зовут Герман',
   messageSended: 'Сообщение отправлено!',
   messageSendFail: 'Сообщение не было отправлено :(',
-  footerContent: 'Никитин Герман. Frontend разработчик. 2014-2021',
+  footerContent: 'Никитин Герман. Frontend разработчик. 2014-2022',
   aboutMeText:
     'Добро пожаловать на мое приложение-портфолио!\n' +
     'Меня зовут Никитин Герман и я senior frontend разработчик.\n \n' +
@@ -20,7 +21,7 @@ export const RU_LOCALE = {
   downloadMyCv: 'Скачать резюме',
   printMyCv: 'Распечатать резюме',
   birthdateText: 'День рождения',
-  birthDateInfo: '4 Августа, 1994 (26 лет)',
+  birthDateInfo: '4 Августа, 1994 (27 лет)',
   locationText: 'Место жительства',
   locationPlace: 'Санкт-Петербург, Россия',
   educationText: 'Образование',
@@ -32,7 +33,7 @@ export const RU_LOCALE = {
     'компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. Работаю по ИП (как удаленный сотрудник по договору подряда).',
   webDevelopmentMainDirections: 'Основные направления',
   webDevelopmentSkillReact:
-    'Разработка на React + Redux (SPA), опыт 3 года (реализовано более 10 прод. приложений)',
+    'Разработка на React + Redux (SPA), опыт 4 года (реализовано более 10 прод. приложений)',
   webDevelopmentSkillLayout:
     'Разработка сайтов на HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix с нуля.',
   webDevelopmentSkillIS: 'Разработка систем безопасности предприятия, анализ угроз.',
@@ -41,15 +42,17 @@ export const RU_LOCALE = {
     'Уверенное знание современных методов и технологий frontend разработки',
   frontEndDevelopmentMainSkills: 'Ключевые навыки',
   frontEndDevelopmentSkillJS:
-    'JavaScript с учетом современных спецификаций ES6-ES10, React, Redux (FLUX) + опыт работы с библиотеками Saga/Thunk',
+    'JavaScript и TypeScript с учетом современных спецификаций ES6-ES12, React, Redux (FLUX) + опыт работы с библиотеками Saga/Thunk.' +
+    ' Глубокое понимание языка TypeScript с учетом продвинутых типов, юнионов и выборки из них (type guards), условных типов (conditional types), перегрузок (overloads),' +
+    ' утилитарных типов, включая кастомные',
   frontEndDevelopmentSkillHTML:
     'Продвинутые знания современной верстки: HTML, CSS с пре/пост-процессорами (LESS / SASS / PostCSS) + Flex/Grid',
   frontEndDevelopmentSkillWebpack:
-    'Понимание современных методов сборки проектов. Опыт работы с WebPack 4/5 (включая новый метод Module Federation), также опыт работы с большими монорепозиториями в продакшене (свыше 15 проектов, а также собственные библиотеки и вложения)',
+    'Понимание современных методов сборки проектов. Опыт работы с WebPack 4/5 (включая новый метод Module Federation), также опыт работы с большими монорепозиториями в продакшене (свыше 40 проектов, а также собственные библиотеки и вложения)',
   mySkillsLevel: 'Уровень знания технологий',
   myExperience: 'Мой опыт работы',
   myExperienceDescription1:
-    'Я занимаюсь коммерческой разработкой уже более 6 лет. Начинал с создания\n' +
+    'Я занимаюсь коммерческой разработкой уже более 8 лет. Начинал с создания\n' +
     'сайтов с нуля в веб студиях, в 2014 году.',
   myExperienceDescription2:
     'Последний год я работал с крупными компаниями в т.ч. международных проектах ' +
