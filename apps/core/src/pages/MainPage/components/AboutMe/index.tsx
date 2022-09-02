@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Box, Button, Divider, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import { Cake, LocationOn, School } from '@material-ui/icons';
-import { CloudDownload, Print } from '@material-ui/icons';
+import { CloudDownload, ContactMailOutlined, Print } from '@material-ui/icons';
+import { GithubIcon } from '@portfolio-app/icons';
 import { coreSelectors } from '@reducers/core';
 import { useSelector } from '@reducers/store';
 import { Anchor, List, ListItem } from '@src/components';
 import { DropdownMenu, MenuItem } from '@src/components/DropdownMenu';
+import { contacts } from '@src/constants';
 import { useLocale, useWindowSize } from '@src/hooks';
+import { getAsset, getYearsFromDate } from '@src/utilities';
 
 import { downloadCV, printCV } from './helpers';
 import styles from './styles.scss';
@@ -50,10 +53,14 @@ export const AboutMe: React.FC = () => {
 
   const actionButtonsWidthRate = isMobile || isTablet ? 12 : 6;
 
+  const yearsCount = getYearsFromDate(new Date(1994, 8, 4));
+
   const aboutMeInfo: ListItem[] = [
     {
       description: localedText('birthdateText'),
-      secondaryDescription: localedText('birthDateInfo'),
+      secondaryDescription: `${localedText('birthDateInfo')}\u00A0(${yearsCount} ${
+        isEnLocale ? 'y.o' : 'лет'
+      })`,
       listAvatar: <Cake />,
     },
     {
@@ -72,6 +79,54 @@ export const AboutMe: React.FC = () => {
     printCV(isEnLocale ? 'EN' : 'RU');
   };
 
+  function AgileCatBotInfo() {
+    return (
+      <Box m={1} p={1}>
+        <Card className={styles.aboutMe__acbCard}>
+          <CardMedia component="img" image={getAsset('acb.png')} alt="Agile Cat Bot" />
+          <Box
+            component="div"
+            m={1}
+            p={1}
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-around"
+          >
+            <Typography variant="body1" color="textSecondary" component="p" align="justify">
+              {localedText('agileCatBotInfo')}
+            </Typography>
+            <Box component="div" display="flex">
+              <Box m={1} width="100%">
+                <Button
+                  className={styles.aboutMe__acbButtons}
+                  variant="contained"
+                  color="primary"
+                  startIcon={<ContactMailOutlined />}
+                  target="_blank"
+                  href={contacts.telegram}
+                >
+                  {localedText('getAcb')}
+                </Button>
+              </Box>
+              <Box m={1} width="100%">
+                <Button
+                  className={styles.aboutMe__acbButtons}
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<GithubIcon />}
+                  target="_blank"
+                  href={`${contacts.gitHub}/AgileCatBot#agilecatbot`}
+                >
+                  {localedText('checkAcb')}
+                </Button>
+              </Box>
+            </Box>
+          </Box>
+        </Card>
+      </Box>
+    );
+  }
+
   return (
     <>
       <Anchor id="about" className={styles.aboutMe__anchor} />
@@ -80,6 +135,7 @@ export const AboutMe: React.FC = () => {
           {localedText('aboutMeText')}
         </Typography>
       </Box>
+      <AgileCatBotInfo />
       <Divider />
       <Box component="div" m={1} p={1}>
         <Grid container alignItems="baseline">

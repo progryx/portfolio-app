@@ -8,4 +8,18 @@
   &__anchor {
     top: -$base * 70;
   }
+
+  &__acbCard {
+    display: flex;
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  &__acbButtons {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
 }

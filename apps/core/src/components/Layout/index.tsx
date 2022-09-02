@@ -25,6 +25,8 @@ export const Layout: React.FC = ({ children }) => {
     return null;
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <AppBar position="fixed" color="primary" square className={styles.NavBar}>
@@ -37,7 +39,7 @@ export const Layout: React.FC = ({ children }) => {
       <AppBar position="static" color="primary" square component="footer">
         <Box m={1} p={1}>
           <Typography variant="subtitle2" align="center">
-            {localedText('footerContent')}
+            {`${localedText('footerContent')} 2014 - ${currentYear}`}
           </Typography>
         </Box>
       </AppBar>

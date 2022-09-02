@@ -9,7 +9,7 @@ export const RU_LOCALE = {
   greetingsHeader: 'Здравствуйте, меня зовут Герман',
   messageSended: 'Сообщение отправлено!',
   messageSendFail: 'Сообщение не было отправлено :(',
-  footerContent: 'Никитин Герман. Frontend разработчик. 2014-2022',
+  footerContent: 'Никитин Герман. Frontend разработчик.',
   aboutMeText:
     'Добро пожаловать на мое приложение-портфолио!\n' +
     'Меня зовут Никитин Герман и я senior frontend разработчик.\n \n' +
@@ -18,10 +18,14 @@ export const RU_LOCALE = {
     'Здесь вы можете узнать о моем опыте разработки и связаться со мной, если вас заинтересовало мое резюме. ' +
     'Кстати, его можно скачать прямо здесь в любом удобном для вас формате или распечатать на английском или русском языке. \n \n' +
     'Буду признателен за любую обратную связь. Хорошего вам дня!',
+  agileCatBotInfo:
+    'Создатель и мэйнтейнер AgileCatBot.\nЭто Телеграм онлайн чат-бот для организации кросс-ревью Agile команд',
+  getAcb: 'Получить бота',
+  checkAcb: 'Исходный код на GitHub',
   downloadMyCv: 'Скачать резюме',
   printMyCv: 'Распечатать резюме',
   birthdateText: 'День рождения',
-  birthDateInfo: '4 Августа, 1994 (27 лет)',
+  birthDateInfo: '4 Августа, 1994',
   locationText: 'Место жительства',
   locationPlace: 'Санкт-Петербург, Россия',
   educationText: 'Образование',
@@ -29,11 +33,11 @@ export const RU_LOCALE = {
   mySkills: 'Мои навыки',
   webDevelopment: 'Веб Разработка',
   webDevelopmentDescription:
-    'Разработка веб-сайтов и одностраниченых приложений (SPA). Опыт работы с зарубежными клиентами (UpWork/oDesk) и крупными \n' +
-    'компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. Работаю по ИП (как удаленный сотрудник по договору подряда).',
+    'Разработка веб-сайтов, одностраниченых приложений (SPA), чат ботов. Опыт работы с зарубежными клиентами (UpWork/oDesk) и крупными \n' +
+    'компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. Работаю только удалённо.',
   webDevelopmentMainDirections: 'Основные направления',
   webDevelopmentSkillReact:
-    'Разработка на React + Redux (SPA), опыт 4 года (реализовано более 10 прод. приложений)',
+    'Разработка на React + Redux (SPA), опыт 6 лет (реализовано более 18 прод. приложений)',
   webDevelopmentSkillLayout:
     'Разработка сайтов на HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix с нуля.',
   webDevelopmentSkillIS: 'Разработка систем безопасности предприятия, анализ угроз.',
@@ -51,13 +55,11 @@ export const RU_LOCALE = {
     'Понимание современных методов сборки проектов. Опыт работы с WebPack 4/5 (включая новый метод Module Federation), также опыт работы с большими монорепозиториями в продакшене (свыше 40 проектов, а также собственные библиотеки и вложения)',
   mySkillsLevel: 'Уровень знания технологий',
   myExperience: 'Мой опыт работы',
-  myExperienceDescription1:
-    'Я занимаюсь коммерческой разработкой уже более 8 лет. Начинал с создания\n' +
-    'сайтов с нуля в веб студиях, в 2014 году.',
-  myExperienceDescription2:
+  myExperienceDescription1: 'Я занимаюсь коммерческой разработкой уже более',
+  myExperienceDescription2: 'лет. Начинал с создания\nсайтов с нуля в веб студиях, в 2014 году.',
+  myExperienceDescription3:
     'Последний год я работал с крупными компаниями в т.ч. международных проектах ' +
     '(ВТБ, ГазПром, Альфа Банк),\n в командах разработки (6-14 чел.)',
-  myExperienceDescription3: 'Я работаю исключительно по договору подряда, как ИП.',
 
   workExperienceWebStudioPosition: 'Веб-мастер',
   workExperienceWebStudioCompanyName: 'Веб студия "Экса Медиа"',
@@ -76,9 +78,14 @@ export const RU_LOCALE = {
 
   workExperienceIpPosition: 'Frontend Web Разработчик',
   workExperienceIpCompanyName: 'ИП Никитин Герман Николаевич',
-  workExperienceIpYears: '2017-Настоящее время',
+  workExperienceIpYears: '2017-2022',
   workExperienceIpDescription:
     'Разработка веб-сайтов, SPA. Опыт работы с зарубежными клиентами (UpWork/oDesk) и крупными компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. В настоящее время реализовано более 8 продакшен проектов.',
+  workExperienceCurrentPosition: 'Ведущий разработчик клиентских приложений',
+  workExperienceCurrentName: 'ООО Центр Орбита',
+  workExperienceCurrentYears: '2022-Настоящее время',
+  workExperienceCurrentDescription:
+    'Разработка микросервисного мультиплатформенного приложения для обслуживания клиентов компании в сфере финтех (крупный банк)',
   myEducation: 'Мое образование',
   myEducationUniversityFac: 'Безопасные Информационные Технологии',
   myEducationUniversityName: 'Университет ИТМО, Россия',
