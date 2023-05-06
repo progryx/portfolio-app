@@ -9,3 +9,9 @@ export const isValidEmail = (email: string) => {
 export const getAsset = (assetName: string) => {
   return `/files/${assetName}`;
 };
+
+export const getYearsFromDate = (date: Date) => {
+  const monthDiff = Date.now() - date.getTime();
+
+  return Math.abs(new Date(monthDiff).getFullYear() - 1970);
+};

@@ -9,7 +9,7 @@ export const EN_LOCALE = {
   greetingsHeader: 'Hello, My name is German',
   messageSended: 'Message successfully sended!',
   messageSendFail: 'Message not sended :(',
-  footerContent: 'Nikitin German. Frontend developer. 2014-2022',
+  footerContent: 'Nikitin German. Frontend developer.',
   aboutMeText:
     'Welcome to my personal portfolio application!\n' +
     'My name is Nikitin German and I am a senior frontend developer.\n \n' +
@@ -18,10 +18,14 @@ export const EN_LOCALE = {
     'Here you can check my development experience and contact with me if you are interested in my CV.' +
     'By the way, you can download it right here in any convenient format for you or print it in English or Russian languages.\n \n' +
     'I would appreciate any feedback. Have a nice day!',
+  agileCatBotInfo:
+    'Creator and lead maintainer of Agile Cat Bot.\nThis is online Telegram chat bot for organizing cross-review of Agile teams.',
+  getAcb: 'Get Agile Cat Bot',
+  checkAcb: 'Source code on GitHub',
   downloadMyCv: 'Download my CV',
   printMyCv: 'Print my CV',
   birthdateText: 'Birthdate',
-  birthDateInfo: 'Aug 4, 1994 (27 y.o)',
+  birthDateInfo: 'Aug 4, 1994',
   locationText: 'Location',
   locationPlace: 'Saint-Petersburg, Russia',
   educationText: 'Education',
@@ -29,12 +33,11 @@ export const EN_LOCALE = {
   mySkills: 'My Skills',
   webDevelopment: 'Web Development',
   webDevelopmentDescription:
-    'Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large\n' +
-    'companies (Alfa Bank, VTB, Gazprom) in the Agile team.Working as IP (as a remote employee under\n' +
-    'a work contract)',
+    'Website developing, SPA, Chat Bots. Work experience with foreign clients (UpWork/oDesk) and large\n' +
+    'companies (Alfa Bank, VTB, Gazprom) in the Agile team. Remote work only.',
   webDevelopmentMainDirections: 'Main directions',
   webDevelopmentSkillReact:
-    'Development on React + Redux (SPA), Experience 4 years. (over 8 huge apps implemented)',
+    'Development on React + Redux (SPA), Experience 6 years. (over 18 huge apps implemented)',
   webDevelopmentSkillLayout:
     'Website development on HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix from scratch.',
   webDevelopmentSkillIS: 'Development of enterprise security systems, threat analysis.',
@@ -51,14 +54,12 @@ export const EN_LOCALE = {
     'Modern project assembly methods. WebPack 4/5 (with Module Federation) and experience with large monorepo (over 40+ projects with libs and assets)',
   mySkillsLevel: 'My skills level',
   myExperience: 'My Experience',
-  myExperienceDescription1:
-    'I have been doing commercial development for over 8 years. I started by creating\n' +
-    'websites from scratch in web studios in 2014.',
+  myExperienceDescription1: 'I have been doing commercial development for over',
   myExperienceDescription2:
+    'years. I started by creating\nwebsites from scratch in web studios in 2014.',
+  myExperienceDescription3:
     'For the last year i have been working with large companies in international projects' +
     '(VTB, Gazprom, Alfa Bank) in the development team (6-14 ppl).',
-  myExperienceDescription3:
-    'I am working only under a work contract as an individual entrepreneur.',
   workExperienceWebStudioPosition: 'Web Master',
   workExperienceWebStudioCompanyName: 'Exa-Media Web studio',
   workExperienceWebStudioDescription:
@@ -76,9 +77,14 @@ export const EN_LOCALE = {
 
   workExperienceIpPosition: 'Frontend Web Developer',
   workExperienceIpCompanyName: 'Individual entrepreneur Nikitin G.N.',
-  workExperienceIpYears: '2017-Present time',
+  workExperienceIpYears: '2017-2022',
   workExperienceIpDescription:
     'Website developing, SPA. Work experience with foreign clients (UpWork/oDesk) and large companies (Alfa Bank, VTB, Gazprom) in the Agile team. Working as IP (as a remote employee under a work contract). In the present time more than 8 projects implemented to production.',
+  workExperienceCurrentPosition: 'Lead Front End Developer',
+  workExperienceCurrentName: 'Orbita Center',
+  workExperienceCurrentYears: '2022-Present time',
+  workExperienceCurrentDescription:
+    'Development of a microservice multi-platform application for customer service of a fintech company (large bank)',
   myEducation: 'My Education',
   myEducationUniversityFac: 'Secure Information Technologies',
   myEducationUniversityName: 'ITMO University, Russia',

@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Card, CardContent, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import { GithubIcon, GmailIcon, SkypeBusinessIcon, TelegramIcon } from '@portfolio-app/icons';
 import { ContactLink } from '@src/components/ContactLink';
+import { contacts } from '@src/constants';
 import { useLocale, useWindowSize } from '@src/hooks';
 import { getAsset } from '@src/utilities';
 
@@ -37,22 +38,22 @@ export const PersonalInfo: React.FC = () => {
 
               <Box component="div" m={1} p={1}>
                 <ContactLink
-                  contactHref="https://t.me/progryx"
+                  contactHref={contacts.telegram}
                   contactText={localedText('telegramProfile')}
                   Icon={TelegramIcon}
                 />
                 <ContactLink
-                  contactHref="mailto:progryx@gmail.com"
+                  contactHref={`mailto:${contacts.email}`}
                   contactText={localedText('mailMe')}
                   Icon={GmailIcon}
                 />
                 <ContactLink
-                  contactHref="https://join.skype.com/invite/oCBgwlpIzsep"
+                  contactHref={contacts.skype}
                   contactText={localedText('skypeMe')}
                   Icon={SkypeBusinessIcon}
                 />
                 <ContactLink
-                  contactHref="https://github.com/progryx"
+                  contactHref={contacts.gitHub}
                   contactText={localedText('gitHubProfile')}
                   Icon={GithubIcon}
                 />

@@ -3,14 +3,28 @@ import React from 'react';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Anchor, List, ListItem } from '@src/components';
 import { useLocale } from '@src/hooks';
-import { getAsset } from '@src/utilities';
+import { getAsset, getYearsFromDate } from '@src/utilities';
 
 import styles from './styles.scss';
 
 export const MyExperience: React.FC = React.memo(() => {
   const localedText = useLocale();
 
+  const currentExperienceYears = getYearsFromDate(new Date(2014, 1, 1));
+
   const WorkExperience: ListItem[] = [
+    {
+      description: (
+        <Box>
+          <Typography>
+            <b>{localedText('workExperienceCurrentPosition')}</b>{' '}
+            {localedText('workExperienceCurrentName')}
+          </Typography>
+          <Typography>{localedText('workExperienceCurrentYears')}</Typography>
+        </Box>
+      ),
+      secondaryDescription: localedText('workExperienceCurrentDescription'),
+    },
     {
       description: (
         <Box>
@@ -76,10 +90,9 @@ export const MyExperience: React.FC = React.memo(() => {
               />
             </Box>
             <Box p={1}>
-              <Typography align="justify">{localedText('myExperienceDescription1')}</Typography>
-            </Box>
-            <Box p={1}>
-              <Typography align="justify">{localedText('myExperienceDescription2')}</Typography>
+              <Typography align="justify">{`${localedText(
+                'myExperienceDescription1'
+              )} ${currentExperienceYears} ${localedText('myExperienceDescription2')}`}</Typography>
             </Box>
             <Box p={1}>
               <Typography align="justify">{localedText('myExperienceDescription3')}</Typography>

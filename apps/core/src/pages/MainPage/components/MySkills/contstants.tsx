@@ -9,6 +9,7 @@ import {
   Html5Icon,
   LogoSassIcon,
   RestApiIcon,
+  TypescriptIcon,
 } from '@portfolio-app/icons';
 
 type SkillLevelItem = {
@@ -19,14 +20,9 @@ type SkillLevelItem = {
 
 export const mySkills: SkillLevelItem[] = [
   {
-    name: 'HTML',
-    level: 95,
-    icon: <Html5Icon />,
-  },
-  {
-    name: 'CSS',
-    level: 92,
-    icon: <Css3Icon />,
+    name: 'TypeScript',
+    level: 98,
+    icon: <TypescriptIcon />,
   },
   {
     name: 'Javascript',
@@ -34,14 +30,24 @@ export const mySkills: SkillLevelItem[] = [
     icon: <BxlJavascriptIcon />,
   },
   {
-    name: 'React',
-    level: 90,
-    icon: <BxlReactIcon />,
+    name: 'HTML',
+    level: 95,
+    icon: <Html5Icon />,
   },
   {
     name: 'Redux',
     level: 95,
     icon: <BxlReduxIcon />,
+  },
+  {
+    name: 'CSS',
+    level: 92,
+    icon: <Css3Icon />,
+  },
+  {
+    name: 'React',
+    level: 90,
+    icon: <BxlReactIcon />,
   },
   {
     name: 'LESS/SASS',
