@@ -3,8 +3,7 @@ import React from 'react';
 import { Box, Divider, Typography } from '@material-ui/core';
 import { Security, Web as SiteIcon } from '@material-ui/icons';
 import { BxlJavascriptIcon, BxlReactIcon, Html5Icon, WebpackIcon } from '@portfolio-app/icons';
-import { Anchor, ListItem, ProgressBar } from '@src/components';
-import { List } from '@src/components';
+import { Anchor, List, ListItem, ProgressBar } from '@src/components';
 import { useLocale } from '@src/hooks';
 
 import { mySkills } from './contstants';
@@ -60,9 +59,7 @@ const SkillsList: React.FC = React.memo(() => {
         <span className={styles.mySkills__skillHeader}>{localedText('webDevelopment')}: </span>
         <Typography>{localedText('webDevelopmentDescription')}</Typography>
         <Divider id={styles.divider} />
-        <span className={styles.mySkills__skillSubHeader}>
-          {localedText('webDevelopmentMainDirections')}
-        </span>
+        <span className={styles.mySkills__skillSubHeader}>{localedText('webDevelopmentMainDirections')}</span>
         <List items={webDevelopmentSkills} />
       </Box>
 
@@ -70,9 +67,7 @@ const SkillsList: React.FC = React.memo(() => {
         <span className={styles.mySkills__skillHeader}>{localedText('frontEndDevelopment')}</span>
         <Typography>{localedText('frontEndDevelopmentDescription')}</Typography>
         <Divider id={styles.divider} />
-        <span className={styles.mySkills__skillSubHeader}>
-          {localedText('frontEndDevelopmentMainSkills')}:{' '}
-        </span>
+        <span className={styles.mySkills__skillSubHeader}>{localedText('frontEndDevelopmentMainSkills')}: </span>
         <List items={FrontEndSkills} />
       </Box>
     </Box>
@@ -89,9 +84,7 @@ const SkillsLevel: React.FC = React.memo(() => {
         {mySkills
           .sort((a, b) => b.level - a.level)
           .map((skill, index) => {
-            return (
-              <ProgressBar key={index} Icon={skill.icon} skill={skill.name} value={skill.level} />
-            );
+            return <ProgressBar key={index} Icon={skill.icon} skill={skill.name} value={skill.level} />;
           })}
       </Box>
     </Box>

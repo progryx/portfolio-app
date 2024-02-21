@@ -1,4 +1,3 @@
-import { PropertiesTypes } from '@portfolio-app/utilities';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';

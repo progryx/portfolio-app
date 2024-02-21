@@ -5,18 +5,20 @@
   "repository": "git@github.com:progryx/portfolio-app.git",
   "author": "German Nikitin <progryx@gmail.com>",
   "private": true,
-  "devDependencies": {
-    "lerna": "^3.22.1",
-    "stylelint-config-standard": "^20.0.0"
-  },
+  "workspaces": [
+    "apps/*",
+    "libraries/*"
+  ],
   "dependencies": {
     "fs-extra": "^9.0.1"
   },
   "scripts": {
-    "install": "lerna bootstrap",
     "start": "lerna run --parallel start",
     "build:prod": "lerna run --parallel build:prod",
     "lint": "lerna run lint",
     "create-app": "node boilerplate/bin/start.js"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.2"
   }
 }

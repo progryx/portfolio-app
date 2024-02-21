@@ -51,20 +51,18 @@ export const ProjectsPage: React.FC = () => {
       <Grid item xs={12}>
         <Box m={1} p={1}>
           <Grid container>
-            {projects.map(
-              ({ name, description, icon, stack, imageSrc, openProjectHandler }, index) => (
-                <Grid item xs={12} md={6} key={index}>
-                  <ProjectItem
-                    name={name}
-                    description={description}
-                    icon={icon}
-                    stack={stack}
-                    imageSrc={imageSrc}
-                    openProjectHandler={openProjectHandler}
-                  />
-                </Grid>
-              )
-            )}
+            {projects.map(({ name, description, icon, stack, imageSrc, openProjectHandler }, index) => (
+              <Grid item xs={12} md={6} key={index}>
+                <ProjectItem
+                  name={name}
+                  description={description}
+                  icon={icon}
+                  stack={stack}
+                  imageSrc={imageSrc}
+                  openProjectHandler={openProjectHandler}
+                />
+              </Grid>
+            ))}
           </Grid>
         </Box>
       </Grid>

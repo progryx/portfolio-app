@@ -60,12 +60,7 @@ export const ProjectItem: React.FC<ProjectsItem> = ({
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <Button
-            variant="outlined"
-            onClick={openProjectHandler}
-            color="default"
-            startIcon={<OpenIcon />}
-          >
+          <Button variant="outlined" onClick={openProjectHandler} color="default" startIcon={<OpenIcon />}>
             {localedText('openProject')}
           </Button>
         </CardActions>

@@ -1,16 +1,20 @@
+const prettierConfig = require('./prettierrc')
+
 module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-rational-order',
-    'stylelint-config-prettier',
   ],
   plugins: [
+    'stylelint-prettier',
     'stylelint-scss',
     'stylelint-order',
     'stylelint-config-rational-order/plugin',
     'stylelint-declaration-block-no-ignored-properties',
   ],
   rules: {
+    'prettier/prettier': [true, prettierConfig],
+    'import-notation': 'string',
     'declaration-block-no-duplicate-properties': true,
     'font-family-no-missing-generic-family-keyword': null,
     'declaration-no-important': true,
@@ -20,8 +24,23 @@ module.exports = {
     'no-descending-specificity': null,
     'declaration-empty-line-before': null,
     'comment-empty-line-before': null,
-    'declaration-colon-newline-after': null,
     'at-rule-no-unknown': null,
+    'selector-class-pattern': [/^.[a-z]([a-z0-9A-Z]+)*(_[a-z0-9]([a-z0-9A-Z]+)*)?(__[a-z0-9]([a-z0-9A-Z]+)*)?$/,
+      {
+        resolveNestedSelectors: true,
+        message: function expected(selectorValue) {
+          return `Expected class selector "${selectorValue}" to match BEM CSS pattern`;
+        },
+      },
+    ],
+    'selector-id-pattern': [/^.[a-z]([a-z0-9A-Z]+)*(_[a-z0-9]([a-z0-9A-Z]+)*)?(__[a-z0-9]([a-z0-9A-Z]+)*)?$/,
+      {
+        resolveNestedSelectors: true,
+        message: function expected(selectorValue) {
+          return `Expected ID selector "${selectorValue}" to match BEM CSS pattern`;
+        },
+      },
+    ],
     'scss/at-rule-no-unknown': true,
     'scss/declaration-nested-properties': 'never',
     'scss/selector-no-redundant-nesting-selector': true,

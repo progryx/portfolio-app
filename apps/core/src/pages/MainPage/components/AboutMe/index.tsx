@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Box, Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
-import { Cake, LocationOn, School } from '@material-ui/icons';
-import { CloudDownload, ContactMailOutlined, Print } from '@material-ui/icons';
+import { Cake, CloudDownload, ContactMailOutlined, LocationOn, Print, School } from '@material-ui/icons';
 import { GithubIcon } from '@portfolio-app/icons';
 import { coreSelectors } from '@reducers/core';
 import { useSelector } from '@reducers/store';
@@ -58,9 +57,7 @@ export const AboutMe: React.FC = () => {
   const aboutMeInfo: ListItem[] = [
     {
       description: localedText('birthdateText'),
-      secondaryDescription: `${localedText('birthDateInfo')}\u00A0(${yearsCount} ${
-        isEnLocale ? 'y.o' : 'лет'
-      })`,
+      secondaryDescription: `${localedText('birthDateInfo')}\u00A0(${yearsCount} ${isEnLocale ? 'y.o' : 'лет'})`,
       listAvatar: <Cake />,
     },
     {
@@ -84,14 +81,7 @@ export const AboutMe: React.FC = () => {
       <Box m={1} p={1}>
         <Card className={styles.aboutMe__acbCard}>
           <CardMedia component="img" image={getAsset('acb.png')} alt="Agile Cat Bot" />
-          <Box
-            component="div"
-            m={1}
-            p={1}
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-around"
-          >
+          <Box component="div" m={1} p={1} display="flex" flexDirection="column" justifyContent="space-around">
             <Typography variant="body1" color="textSecondary" component="p" align="justify">
               {localedText('agileCatBotInfo')}
             </Typography>

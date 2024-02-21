@@ -6,13 +6,12 @@ import {
   BarChart,
   HomeOutlined,
   ImportantDevices,
+  Menu as MenuIcon,
   School,
   TrendingUp,
   WorkOutline,
 } from '@material-ui/icons';
-import { Menu as MenuIcon } from '@material-ui/icons';
-import { ListItem } from '@src/components';
-import { List, Logo } from '@src/components';
+import { List, ListItem, Logo } from '@src/components';
 import { ROUTES_MAP } from '@src/constants';
 import { useLocale } from '@src/hooks';
 
@@ -94,12 +93,7 @@ export const MobileMenu: React.FC = () => {
     <>
       <Toolbar className={styles.mobileMenu}>
         <div className={styles.mobileMenu__logo}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={() => setIsOpened(true)}
-          >
+          <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => setIsOpened(true)}>
             <MenuIcon />
           </IconButton>
           <Logo href="#about" onClick={() => handleChangeLocation(`${ROUTES_MAP.main}#about`)} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 
 import {
   Checkbox,
@@ -16,7 +16,7 @@ import {
 import { Alert } from '@material-ui/lab';
 import { actions, mainSelectors } from '@reducers/main';
 
-export const UsersTable: React.FC = ({}) => {
+export const UsersTable: React.FC = (_props) => {
   const tableData = useSelector(mainSelectors.getTableData);
   const serverMessage = useSelector(mainSelectors.getServerMessage);
 
@@ -77,9 +77,7 @@ export const UsersTable: React.FC = ({}) => {
               Users:{' '}
               {tableData.items
                 .filter((user) => user.checked)
-                .map((user, index, arr) =>
-                  index !== arr.length - 1 ? `${user.firstName}, ` : user.firstName
-                )}
+                .map((user, index, arr) => (index !== arr.length - 1 ? `${user.firstName}, ` : user.firstName))}
             </Typography>
           </caption>
         </Table>

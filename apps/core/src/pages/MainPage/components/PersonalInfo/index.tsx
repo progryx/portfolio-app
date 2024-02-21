@@ -16,8 +16,7 @@ export const PersonalInfo: React.FC = () => {
 
   const { isMobile, isLargeMobile, isTablet, isSmallDesktop } = useWindowSize();
 
-  const avatarBlockWidthRate =
-    isMobile || isLargeMobile ? 12 : isTablet ? 10 : isSmallDesktop ? 8 : 4;
+  const avatarBlockWidthRate = isMobile || isLargeMobile ? 12 : isTablet ? 10 : isSmallDesktop ? 8 : 4;
 
   return (
     <Grid container justify="center">

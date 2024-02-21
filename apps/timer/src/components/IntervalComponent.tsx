@@ -1,13 +1,6 @@
 import React from 'react';
 
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Button,
-  ButtonGroup,
-  Typography,
-} from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonGroup, Typography } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 type Props = {

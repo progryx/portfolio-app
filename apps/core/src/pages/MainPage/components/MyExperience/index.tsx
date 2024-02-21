@@ -17,8 +17,7 @@ export const MyExperience: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('workExperienceCurrentPosition')}</b>{' '}
-            {localedText('workExperienceCurrentName')}
+            <b>{localedText('workExperienceCurrentPosition')}</b> {localedText('workExperienceCurrentName')}
           </Typography>
           <Typography>{localedText('workExperienceCurrentYears')}</Typography>
         </Box>
@@ -29,8 +28,7 @@ export const MyExperience: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('workExperienceIpPosition')}</b>{' '}
-            {localedText('workExperienceIpCompanyName')}
+            <b>{localedText('workExperienceIpPosition')}</b> {localedText('workExperienceIpCompanyName')}
           </Typography>
           <Typography>{localedText('workExperienceIpYears')}</Typography>
         </Box>
@@ -41,8 +39,7 @@ export const MyExperience: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('workExperienceMobilePosition')}</b>{' '}
-            {localedText('workExperienceMobileCompanyName')}
+            <b>{localedText('workExperienceMobilePosition')}</b> {localedText('workExperienceMobileCompanyName')}
           </Typography>
           <Typography>2017</Typography>
         </Box>
@@ -65,8 +62,7 @@ export const MyExperience: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('workExperienceWebStudioPosition')}</b>{' '}
-            {localedText('workExperienceWebStudioCompanyName')}
+            <b>{localedText('workExperienceWebStudioPosition')}</b> {localedText('workExperienceWebStudioCompanyName')}
           </Typography>
           <Typography>2014-2015</Typography>
         </Box>
@@ -83,11 +79,7 @@ export const MyExperience: React.FC = React.memo(() => {
         <Grid container alignItems="center" justify="center">
           <Grid item xs={12} md={4}>
             <Box p={1}>
-              <img
-                src={getAsset('web_development.png')}
-                alt="Web dev"
-                className={styles.myExperience__webDevImage}
-              />
+              <img src={getAsset('web_development.png')} alt="Web dev" className={styles.myExperience__webDevImage} />
             </Box>
             <Box p={1}>
               <Typography align="justify">{`${localedText(

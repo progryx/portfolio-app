@@ -3,15 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import { EN_LOCALE } from '@locales/en';
 import { RU_LOCALE } from '@locales/ru';
-import {
-  Box,
-  Button,
-  CircularProgress,
-  FormControl,
-  Grid,
-  Typography,
-  TypographyTypeMap,
-} from '@material-ui/core';
+import { Box, Button, CircularProgress, FormControl, Grid, Typography, TypographyTypeMap } from '@material-ui/core';
 import { GetFormKeys } from '@portfolio-app/utilities';
 import { coreActions, coreSelectors } from '@reducers/core';
 import { useDispatch, useSelector } from '@reducers/store';

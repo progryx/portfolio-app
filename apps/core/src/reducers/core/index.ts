@@ -38,8 +38,7 @@ export const coreSlice = createSlice({
 
 export const coreSelectors = {
   getCurrentLang: (state: RootState) => state.core.language,
-  getCurrentLangName: (state: RootState) =>
-    state.core.language === 'EN' ? LANG_NAMES.EN : LANG_NAMES.RU,
+  getCurrentLangName: (state: RootState) => (state.core.language === 'EN' ? LANG_NAMES.EN : LANG_NAMES.RU),
   isEnLanguage: (state: RootState) => state.core.language === 'EN',
   getToastMessage: (state: RootState) => state.core.toastMessage,
 };

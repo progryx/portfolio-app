@@ -27,34 +27,29 @@ type Props = {
 export const List: React.FC<Props> = ({ items }) => {
   return (
     <MList>
-      {items.map(
-        (
-          { description, Icon, iconClassname, secondaryDescription, listAvatar, onClick, href },
-          index
-        ) => {
-          const ListItem: React.FC = ({ children }) => {
-            return isDefined(onClick) && isDefined(href) ? (
-              <MListItem key={index} button component="a" onClick={onClick} href={href}>
-                {children}
-              </MListItem>
-            ) : (
-              <MListItem key={index}>{children}</MListItem>
-            );
-          };
-
-          return (
-            <ListItem key={index}>
-              {Icon && <MListItemIcon className={iconClassname}>{Icon}</MListItemIcon>}
-              {listAvatar && (
-                <MListItemAvatar>
-                  <MListAvatar>{listAvatar}</MListAvatar>
-                </MListItemAvatar>
-              )}
-              <MListItemText primary={description} secondary={secondaryDescription} />
-            </ListItem>
+      {items.map(({ description, Icon, iconClassname, secondaryDescription, listAvatar, onClick, href }, index) => {
+        const ListItem: React.FC = ({ children }) => {
+          return isDefined(onClick) && isDefined(href) ? (
+            <MListItem key={index} button component="a" onClick={onClick} href={href}>
+              {children}
+            </MListItem>
+          ) : (
+            <MListItem key={index}>{children}</MListItem>
           );
-        }
-      )}
+        };
+
+        return (
+          <ListItem key={index}>
+            {Icon && <MListItemIcon className={iconClassname}>{Icon}</MListItemIcon>}
+            {listAvatar && (
+              <MListItemAvatar>
+                <MListAvatar>{listAvatar}</MListAvatar>
+              </MListItemAvatar>
+            )}
+            <MListItemText primary={description} secondary={secondaryDescription} />
+          </ListItem>
+        );
+      })}
     </MList>
   );
 };
