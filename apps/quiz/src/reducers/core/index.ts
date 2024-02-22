@@ -11,7 +11,7 @@ export type CoreActions = ReturnType<PropertiesTypes<typeof coreActions>>;
 
 const steps = ['selectPcType', 'selectPcPrice', 'selectPcTasks'] as const;
 
-type Steps = typeof steps[number];
+type Steps = (typeof steps)[number];
 
 export type SystemsIds = SelectPcPriceSystemId | SelectPcTasksSystemId | SelectPcTypeSystemId;
 
@@ -66,9 +66,7 @@ export const coreSelectors = {
     //   (item) => item.id === state.selectPcTasks.selectedItem
     // );
 
-    const selectedPrice = state.selectPcPrice.items.find(
-      (item) => item.id === state.selectPcPrice.selectedItem
-    );
+    const selectedPrice = state.selectPcPrice.items.find((item) => item.id === state.selectPcPrice.selectedItem);
 
     const processor = getByPrice('processor', selectedPrice);
 

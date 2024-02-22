@@ -10,10 +10,10 @@ export const ItemTypes = {
   CARD: 'card',
 } as const;
 
-export type TaskPriority = typeof priorities[number];
-export type TaskType = typeof types[number];
-export type StatusType = typeof statuses[number];
-export type ProjectType = typeof projects[number];
+export type TaskPriority = (typeof priorities)[number];
+export type TaskType = (typeof types)[number];
+export type StatusType = (typeof statuses)[number];
+export type ProjectType = (typeof projects)[number];
 
 export type TaskData = {
   number: string;
@@ -45,7 +45,7 @@ export type MoveCardParams = {
 };
 
 export type DragItem = {
-  type: typeof ItemTypes['CARD'];
+  type: (typeof ItemTypes)['CARD'];
   id: string;
   status: StatusType;
 };

@@ -5,7 +5,7 @@ export const EN_LOCALE = {
   gitHubProfile: 'GitHub profile',
   telegramProfile: 'Telegram profile',
   mailMe: 'Mail me',
-  skypeMe: 'Contact me with Skype',
+  vkMe: 'VK profile',
   greetingsHeader: 'Hello, My name is German',
   messageSended: 'Message successfully sended!',
   messageSendFail: 'Message not sended :(',
@@ -36,14 +36,12 @@ export const EN_LOCALE = {
     'Website developing, SPA, Chat Bots. Work experience with foreign clients (UpWork/oDesk) and large\n' +
     'companies (Alfa Bank, VTB, Gazprom) in the Agile team. Remote work only.',
   webDevelopmentMainDirections: 'Main directions',
-  webDevelopmentSkillReact:
-    'Development on React + Redux (SPA), Experience 6 years. (over 18 huge apps implemented)',
+  webDevelopmentSkillReact: 'Development on React + Redux (SPA), Experience 6 years. (over 18 huge apps implemented)',
   webDevelopmentSkillLayout:
     'Website development on HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix from scratch.',
   webDevelopmentSkillIS: 'Development of enterprise security systems, threat analysis.',
   frontEndDevelopment: 'Frontend Development',
-  frontEndDevelopmentDescription:
-    'Confident knowledge of modern methods and technologies of front-end development.',
+  frontEndDevelopmentDescription: 'Confident knowledge of modern methods and technologies of front-end development.',
   frontEndDevelopmentMainSkills: 'Main skills',
   frontEndDevelopmentSkillJS:
     'JavaScript and Typescript with modern specifications ES6-ES12, React, Redux (FLUX) + Async libs Saga/Thunk.' +
@@ -55,8 +53,7 @@ export const EN_LOCALE = {
   mySkillsLevel: 'My skills level',
   myExperience: 'My Experience',
   myExperienceDescription1: 'I have been doing commercial development for over',
-  myExperienceDescription2:
-    'years. I started by creating\nwebsites from scratch in web studios in 2014.',
+  myExperienceDescription2: 'years. I started by creating\nwebsites from scratch in web studios in 2014.',
   myExperienceDescription3:
     'For the last year i have been working with large companies in international projects' +
     '(VTB, Gazprom, Alfa Bank) in the development team (6-14 ppl).',
@@ -116,6 +113,5 @@ export const EN_LOCALE = {
   projectsUsersTableDescription:
     'Simple table of users. You can select one ore more users and it selected users are displayed at the bottom',
   projectsQuiz: 'Quiz application',
-  projectQuizDescription:
-    'Real quiz with feedback and result at the end! Go through the Quiz and know you result!',
+  projectQuizDescription: 'Real quiz with feedback and result at the end! Go through the Quiz and know you result!',
 };

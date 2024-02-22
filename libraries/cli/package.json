@@ -1,0 +1,13 @@
+{
+  "name": "@portfolio-app/cli",
+  "version": "1.0.0",
+  "description": "CLI lib for project",
+  "main": "index.js",
+  "author": "progryx",
+  "scripts": {
+    "lint": "eslint ./test.ts"
+  },
+  "dependencies": {
+    "typescript": "5.3.3"
+  }
+}

@@ -48,13 +48,7 @@ export const DropdownMenu: React.FC<Props> = ({
       >
         {linkMenuText}
       </Button>
-      <Menu
-        id="simple-menu"
-        anchorEl={element}
-        keepMounted
-        open={Boolean(element)}
-        onClose={handleClose}
-      >
+      <Menu id="simple-menu" anchorEl={element} keepMounted open={Boolean(element)} onClose={handleClose}>
         {items.map(({ description, handleClickItem }, index) => {
           const handleClick = () => {
             handleClickItem();

@@ -17,12 +17,11 @@ export type TableData = {
 };
 
 export const actions = {
-  setError: (error: string) => ({ type: 'SET_ERROR', payload: { error } } as const),
-  setUsers: (users: MockData) => ({ type: 'SET_USERS', payload: { users } } as const),
-  getUsers: () => ({ type: 'GET_USERS' } as const),
-  selectUser: (id: string) => ({ type: 'SELECT_USER', payload: { id } } as const),
-  selectAllUsers: (selected: boolean) =>
-    ({ type: 'SELECT_ALL_USERS', payload: { selected } } as const),
+  setError: (error: any) => ({ type: 'SET_ERROR', payload: { error } }) as const,
+  setUsers: (users: MockData) => ({ type: 'SET_USERS', payload: { users } }) as const,
+  getUsers: () => ({ type: 'GET_USERS' }) as const,
+  selectUser: (id: string) => ({ type: 'SELECT_USER', payload: { id } }) as const,
+  selectAllUsers: (selected: boolean) => ({ type: 'SELECT_ALL_USERS', payload: { selected } }) as const,
 };
 
 export const mainSelectors = {
@@ -69,9 +68,7 @@ export const mainReducer = (state = initialState, action: ActionTypes) => {
           items,
           isSelectedAll,
         },
-        selectedUsers: state.table.items
-          .filter((user) => user.checked)
-          .map((user) => user.firstName),
+        selectedUsers: state.table.items.filter((user) => user.checked).map((user) => user.firstName),
       };
     }
 

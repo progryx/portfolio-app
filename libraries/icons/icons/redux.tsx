@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const BxlReduxIcon = (props: { className?: string }) => (
   <div {...props}>

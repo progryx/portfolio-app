@@ -63,9 +63,7 @@ export const ProgressBar = (props: LinearProgressWithLabel) => {
           <BorderLinearProgress variant="determinate" value={progress} />
         </Box>
         <Box minWidth={35}>
-          <Typography variant="body2" color="textSecondary">{`${Math.round(
-            progress
-          )}%`}</Typography>
+          <Typography variant="body2" color="textSecondary">{`${Math.round(progress)}%`}</Typography>
         </Box>
       </Box>
     </ThemeProvider>

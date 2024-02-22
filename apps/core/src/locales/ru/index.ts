@@ -5,7 +5,7 @@ export const RU_LOCALE = {
   gitHubProfile: 'GitHub репозиторий',
   telegramProfile: 'Профиль в Телеграм',
   mailMe: 'Электронная почта',
-  skypeMe: 'Связь по Skype',
+  vkMe: 'Профиль ВКонтакте',
   greetingsHeader: 'Здравствуйте, меня зовут Герман',
   messageSended: 'Сообщение отправлено!',
   messageSendFail: 'Сообщение не было отправлено :(',
@@ -36,14 +36,12 @@ export const RU_LOCALE = {
     'Разработка веб-сайтов, одностраниченых приложений (SPA), чат ботов. Опыт работы с зарубежными клиентами (UpWork/oDesk) и крупными \n' +
     'компаниями (Альфа Банк, ВТБ, Газпром) в команде по Agile. Работаю только удалённо.',
   webDevelopmentMainDirections: 'Основные направления',
-  webDevelopmentSkillReact:
-    'Разработка на React + Redux (SPA), опыт 6 лет (реализовано более 18 прод. приложений)',
+  webDevelopmentSkillReact: 'Разработка на React + Redux (SPA), опыт 6 лет (реализовано более 18 прод. приложений)',
   webDevelopmentSkillLayout:
     'Разработка сайтов на HTML5 / CSS3 / JavaScript + CMS WordPress / Joomla / Drupal / Bitrix с нуля.',
   webDevelopmentSkillIS: 'Разработка систем безопасности предприятия, анализ угроз.',
   frontEndDevelopment: 'Frontend Разработка',
-  frontEndDevelopmentDescription:
-    'Уверенное знание современных методов и технологий frontend разработки',
+  frontEndDevelopmentDescription: 'Уверенное знание современных методов и технологий frontend разработки',
   frontEndDevelopmentMainSkills: 'Ключевые навыки',
   frontEndDevelopmentSkillJS:
     'JavaScript и TypeScript с учетом современных спецификаций ES6-ES12, React, Redux (FLUX) + опыт работы с библиотеками Saga/Thunk.' +
@@ -91,16 +89,14 @@ export const RU_LOCALE = {
   myEducationUniversityName: 'Университет ИТМО, Россия',
   myEducationUniversityDescription:
     'Тема диплома: Разработка безопасной информационной среды для коммерческой компании',
-  myEducationUniversityFac2:
-    'Программное обеспечение вычислительной техники и автоматизированных систем',
+  myEducationUniversityFac2: 'Программное обеспечение вычислительной техники и автоматизированных систем',
   myEducationUniversityDescription2:
     'Тема диплома: ' +
     'Разработка программного модуля каталогизации учебных материалов для образовательной среды университета.',
   myEducationCoursesFac: 'Курсы предпрофильной подготовки',
   myEducationCoursesName: 'Институт Информационных Технологий СЕГРИС, Россия',
   sendMeMessage: 'Оставьте свое сообщение!',
-  sendMeMessageDesc1:
-    'Вы разрабытваете или начинаете разработку своего приложения? \nБуду рад вам в этом помочь!',
+  sendMeMessageDesc1: 'Вы разрабытваете или начинаете разработку своего приложения? \nБуду рад вам в этом помочь!',
   sendMeMessageDesc2:
     'Просто отправьте мне сообщение, используя контактную форму и я свяжусь с вами как можно скорее. \n\nСпасибо ;)',
   formNameLabel: 'Ваше имя',

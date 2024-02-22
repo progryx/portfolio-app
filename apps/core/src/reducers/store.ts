@@ -1,8 +1,4 @@
-import {
-  TypedUseSelectorHook,
-  useDispatch as ReduxUseDispatch,
-  useSelector as ReduxUseSelector,
-} from 'react-redux';
+import { TypedUseSelectorHook, useDispatch as ReduxUseDispatch, useSelector as ReduxUseSelector } from 'react-redux';
 
 import { CoreActions } from '@reducers/core';
 import { rootReducer, RootState } from '@reducers/index';

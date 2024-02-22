@@ -23,12 +23,7 @@ export const QuizSelector: React.FC<Props> = ({ items, topic, handleSelectItem }
 
         return (
           <Grid item xs={gridRate as GridSize} key={id}>
-            <QuizItem
-              name={name}
-              description={description}
-              image={image}
-              onClick={() => handleSelectItem(id)}
-            />
+            <QuizItem name={name} description={description} image={image} onClick={() => handleSelectItem(id)} />
           </Grid>
         );
       })}

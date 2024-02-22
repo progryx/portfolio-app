@@ -2,14 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { Button, Toolbar } from '@material-ui/core';
-import {
-  BarChart,
-  HomeOutlined,
-  ImportantDevices,
-  School,
-  TrendingUp,
-  WorkOutline,
-} from '@material-ui/icons';
+import { BarChart, HomeOutlined, ImportantDevices, School, TrendingUp, WorkOutline } from '@material-ui/icons';
 import { Logo } from '@src/components';
 import { ROUTES_MAP } from '@src/constants';
 import { useLocale } from '@src/hooks';

@@ -1,3 +1,4 @@
+import { Cards } from '@reducers/types';
 import { call, put, takeLatest } from 'redux-saga/effects';
 
 import { mainActions } from '../main';
@@ -14,7 +15,7 @@ const getServerData = () =>
 
 function* getCardsFromServer() {
   try {
-    const data = yield call(getServerData);
+    const data: Cards = yield call(getServerData);
     yield put(mainActions.setCards(data));
   } catch (e) {
     yield put(mainActions.setError(e));

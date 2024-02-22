@@ -18,11 +18,7 @@ export const GridColumn: React.FC<{
 }> = ({ status, cards }) => {
   const dispatch = useDispatch();
 
-  const [{ isOver, canDrop }, drop] = useDrop<
-    DragItem,
-    unknown,
-    { isOver: boolean; canDrop: boolean }
-  >({
+  const [{ isOver, canDrop }, drop] = useDrop<DragItem, unknown, { isOver: boolean; canDrop: boolean }>({
     accept: ItemTypes.CARD,
     drop: (item) => {
       dispatch(
@@ -44,10 +40,7 @@ export const GridColumn: React.FC<{
 
   return (
     <Grid
-      className={classNames(
-        isOver && !canDrop && css.isUnavailableToDrag,
-        isOver && canDrop && css.isAvailableToDrag
-      )}
+      className={classNames(isOver && !canDrop && css.isUnavailableToDrag, isOver && canDrop && css.isAvailableToDrag)}
       ref={drop}
       item
       xs={3}

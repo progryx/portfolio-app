@@ -1,11 +1,11 @@
 @import '~@portfolio-app/styles/src/properties/sizes';
 
 .logo {
-    display: block;
+  display: block;
 
-    width: $base * 50;
-    height: $base * 16;
+  width: $base * 50;
+  height: $base * 16;
 
-    background: url('https://gnikitin.ru/files/logo.png') 0 50%;
-    background-size: 100%;
+  background: url('https://gnikitin.ru/files/logo.png') 0 50%;
+  background-size: 100%;
 }

@@ -49,12 +49,7 @@ export const Breadcrumbs: React.FC = () => {
               {routeName}
             </Typography>
           ) : (
-            <Link
-              key={index}
-              color="inherit"
-              href={routeTo}
-              onClick={(e: EventType) => handleClick(e, routeTo)}
-            >
+            <Link key={index} color="inherit" href={routeTo} onClick={(e: EventType) => handleClick(e, routeTo)}>
               {routeName}
             </Link>
           );

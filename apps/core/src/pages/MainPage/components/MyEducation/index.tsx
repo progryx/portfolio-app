@@ -15,8 +15,7 @@ export const MyEducation: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('myEducationUniversityFac')}</b>{' '}
-            {localedText('myEducationUniversityName')}
+            <b>{localedText('myEducationUniversityFac')}</b> {localedText('myEducationUniversityName')}
           </Typography>
           <Typography>2015-2019</Typography>
         </Box>
@@ -27,8 +26,7 @@ export const MyEducation: React.FC = React.memo(() => {
       description: (
         <Box>
           <Typography>
-            <b>{localedText('myEducationUniversityFac2')}</b>{' '}
-            {localedText('myEducationUniversityName')}
+            <b>{localedText('myEducationUniversityFac2')}</b> {localedText('myEducationUniversityName')}
           </Typography>
           <Typography>2010-2014</Typography>
         </Box>
@@ -59,11 +57,7 @@ export const MyEducation: React.FC = React.memo(() => {
           </Grid>
           <Grid item xs={12} md={4}>
             <Box p={1} display="flex" justifyContent="center">
-              <img
-                src={getAsset('education.png')}
-                alt="Education"
-                className={styles.myEducation__eImage}
-              />
+              <img src={getAsset('education.png')} alt="Education" className={styles.myEducation__eImage} />
             </Box>
           </Grid>
         </Grid>
