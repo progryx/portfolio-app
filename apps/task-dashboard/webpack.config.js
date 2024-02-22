@@ -4,6 +4,7 @@ const { webpackConfig } = require('@portfolio-app/webpack');
 
 module.exports = (_env = {}, { mode }) =>
   webpackConfig({
+    currentPath: __dirname,
     mode,
     moduleFederation: {
       name: 'dashboard',
