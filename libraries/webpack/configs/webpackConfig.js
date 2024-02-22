@@ -12,6 +12,7 @@ const links = require('../links');
  *
  * @param {{
  *  mode?: "development" | "production" | "none";
+ *  currentPath?: string;
  *    moduleFederation?: {
  *      name?: string;
  *      remotes?: object;
@@ -23,7 +24,7 @@ const links = require('../links');
  * }} payload
  */
 function webpackConfig(payload) {
-  const { mode, moduleFederation, alias, rules = [] } = payload;
+  const { mode, currentPath, moduleFederation, alias, rules = [] } = payload;
   const isProduction = mode === 'production';
 
   const plugins = [
@@ -73,20 +74,20 @@ function webpackConfig(payload) {
     mode,
     devtool: isProduction ? 'source-map' : false,
     devServer: {
-      static: path.join(__dirname, 'dist'),
+      static: path.join(currentPath, 'dist'),
       port: links[moduleFederation.name].port,
       historyApiFallback: true,
       proxy: [{ context: ['/files'], target: 'https://gnikitin.ru', secure: true, changeOrigin: true }],
     },
     output: {
       publicPath: isProduction ? links[moduleFederation.name].prodUrl : links[moduleFederation.name].devUrl,
-      path: path.join(__dirname, '/dist'),
+      path: path.join(currentPath, '/dist'),
       filename: 'main.js',
       libraryTarget: 'umd',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],
-      modules: [path.resolve(__dirname, './src'), path.resolve(__dirname, '../../../node_modules')],
+      modules: [path.resolve(currentPath, './src'), path.resolve(currentPath, '../../node_modules')],
       alias,
     },
     module: {
