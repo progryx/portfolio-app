@@ -14,7 +14,7 @@ export const ContactLink: React.FC<Props> = ({ contactHref, contactText, Icon })
   return (
     <div className={styles.contactLink__contact}>
       {Icon && <Icon className={styles.contactLink__contactIcon} />}
-      <Link variant="body2" href={contactHref}>
+      <Link variant="body2" href={contactHref} target="_blank">
         {contactText}
       </Link>
     </div>

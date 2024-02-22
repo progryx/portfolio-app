@@ -4,6 +4,13 @@
   "description": "Global icons for project",
   "main": "src/index.tsx",
   "author": "progryx",
+  "scripts": {
+    "lint": "eslint 'icons/**/*.ts{,x}'",
+    "lint-fix": "eslint 'icons/**/*.ts{,x}' --fix"
+  },
+  "devDependencies": {
+    "@portfolio-app/linters": "1.0.0"
+  },
   "dependencies": {
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",

@@ -17,7 +17,7 @@ export type TableData = {
 };
 
 export const actions = {
-  setError: (error: string) => ({ type: 'SET_ERROR', payload: { error } }) as const,
+  setError: (error: any) => ({ type: 'SET_ERROR', payload: { error } }) as const,
   setUsers: (users: MockData) => ({ type: 'SET_USERS', payload: { users } }) as const,
   getUsers: () => ({ type: 'GET_USERS' }) as const,
   selectUser: (id: string) => ({ type: 'SELECT_USER', payload: { id } }) as const,

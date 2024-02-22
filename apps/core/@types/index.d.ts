@@ -29,3 +29,19 @@ declare module '*.txt' {
   const content: string;
   export default content;
 }
+
+declare module 'quiz/QuizApp' {
+  export default () => JSX;
+}
+
+declare module 'users/UsersTable' {
+  export default () => JSX;
+}
+
+declare module 'dashboard/TaskDashboard' {
+  export default () => JSX;
+}
+
+declare module 'timer/TimerApp' {
+  export default () => JSX;
+}

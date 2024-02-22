@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Card, CardContent, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
-import { GithubIcon, GmailIcon, SkypeBusinessIcon, TelegramIcon } from '@portfolio-app/icons';
+import { GithubIcon, GmailIcon, TelegramIcon, VKIcon } from '@portfolio-app/icons';
 import { ContactLink } from '@src/components/ContactLink';
 import { contacts } from '@src/constants';
 import { useLocale, useWindowSize } from '@src/hooks';
@@ -46,11 +46,7 @@ export const PersonalInfo: React.FC = () => {
                   contactText={localedText('mailMe')}
                   Icon={GmailIcon}
                 />
-                <ContactLink
-                  contactHref={contacts.skype}
-                  contactText={localedText('skypeMe')}
-                  Icon={SkypeBusinessIcon}
-                />
+                <ContactLink contactHref={contacts.vk} contactText={localedText('vkMe')} Icon={VKIcon} />
                 <ContactLink
                   contactHref={contacts.gitHub}
                   contactText={localedText('gitHubProfile')}

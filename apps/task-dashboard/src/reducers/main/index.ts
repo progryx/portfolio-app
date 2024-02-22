@@ -7,7 +7,7 @@ import { CardData, Cards, DashboardData, MoveCardParams, statuses } from '../typ
 type ActionTypes = InferActionTypes<typeof mainActions>;
 
 export const mainActions = {
-  setError: (error: string) => ({ type: 'SET_ERROR', payload: { error } }) as const,
+  setError: (error: any) => ({ type: 'SET_ERROR', payload: { error } }) as const,
   setCards: (cards: Cards) => ({ type: 'SET_CARDS', payload: { cards } }) as const,
   getCards: () => ({ type: 'GET_CARDS' }) as const,
   moveCard: (payload: MoveCardParams) => ({ type: 'MOVE_CARD', payload }) as const,

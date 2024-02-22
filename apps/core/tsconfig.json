@@ -11,10 +11,6 @@
       "@hooks/*": ["./src/hooks/*"],
       "@utilities/*": ["src/utilities/*"],
       "@assets/*": ["./assets/*"],
-      "timer/*": ["../timer/exports/*"],
-      "dashboard/*": ["../task-dashboard/exports/*"],
-      "users/*": ["../users-table/exports/*"],
-      "quiz/*": ["../quiz/exports/*"],
     }
   },
   "include": ["./**/*"]

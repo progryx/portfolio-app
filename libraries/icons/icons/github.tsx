@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const GithubIcon = (props: { className?: string }) => (
   <div {...props}>

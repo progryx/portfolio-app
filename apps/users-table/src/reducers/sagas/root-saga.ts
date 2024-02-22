@@ -14,7 +14,7 @@ const getServerData = () =>
 
 function* getUsersFromServer() {
   try {
-    const data = yield call(getServerData);
+    const data: typeof mockData = yield call(getServerData);
     yield put(actions.setUsers(data));
   } catch (e) {
     yield put(actions.setError(e));

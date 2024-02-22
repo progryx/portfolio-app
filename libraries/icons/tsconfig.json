@@ -2,8 +2,7 @@
   "extends": "../../node_modules/@portfolio-app/cli/tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@src/*": ["./src/*"],
+      "@src/*": ["./src/*"]
     }
-  },
-  "include": ["./**/*"]
+  }
 }

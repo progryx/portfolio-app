@@ -5,7 +5,7 @@ export const EN_LOCALE = {
   gitHubProfile: 'GitHub profile',
   telegramProfile: 'Telegram profile',
   mailMe: 'Mail me',
-  skypeMe: 'Contact me with Skype',
+  vkMe: 'VK profile',
   greetingsHeader: 'Hello, My name is German',
   messageSended: 'Message successfully sended!',
   messageSendFail: 'Message not sended :(',

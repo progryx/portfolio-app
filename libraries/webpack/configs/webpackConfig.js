@@ -73,16 +73,10 @@ function webpackConfig(payload) {
     mode,
     devtool: isProduction ? 'source-map' : false,
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      static: path.join(__dirname, 'dist'),
       port: links[moduleFederation.name].port,
       historyApiFallback: true,
-      proxy: {
-        '/files': {
-          target: 'https://gnikitin.ru',
-          secure: true,
-          changeOrigin: true,
-        },
-      },
+      proxy: [{ context: ['/files'], target: 'https://gnikitin.ru', secure: true, changeOrigin: true }],
     },
     output: {
       publicPath: isProduction ? links[moduleFederation.name].prodUrl : links[moduleFederation.name].devUrl,

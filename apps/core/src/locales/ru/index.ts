@@ -5,7 +5,7 @@ export const RU_LOCALE = {
   gitHubProfile: 'GitHub репозиторий',
   telegramProfile: 'Профиль в Телеграм',
   mailMe: 'Электронная почта',
-  skypeMe: 'Связь по Skype',
+  vkMe: 'Профиль ВКонтакте',
   greetingsHeader: 'Здравствуйте, меня зовут Герман',
   messageSended: 'Сообщение отправлено!',
   messageSendFail: 'Сообщение не было отправлено :(',

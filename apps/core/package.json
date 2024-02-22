@@ -4,7 +4,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "start": "webpack serve --mode development --env development --port 3000",
+    "start": "webpack serve --mode=development --env=development --port=3000",
     "build": "webpack --mode=development",
     "build:prod": "webpack --mode=production",
     "lint": "npm-run-all --parallel lint:*",
