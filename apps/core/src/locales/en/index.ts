@@ -1,5 +1,6 @@
 export const EN_LOCALE = {
   aboutMe: 'About me',
+  myBlog: 'My blog',
   myProjects: 'Test tasks',
   contactMe: 'Contact me:',
   gitHubProfile: 'GitHub profile',

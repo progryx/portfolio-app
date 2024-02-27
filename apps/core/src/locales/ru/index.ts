@@ -1,5 +1,6 @@
 export const RU_LOCALE = {
   aboutMe: 'Обо мне',
+  myBlog: 'Мой блог',
   myProjects: 'Тестовые задания',
   contactMe: 'Связь со мной:',
   gitHubProfile: 'GitHub репозиторий',

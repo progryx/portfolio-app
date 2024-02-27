@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <% if(htmlWebpackPlugin.options && htmlWebpackPlugin.options.isProduction) { %>
-      <script src="https://gnikitin.ru/remoteEntry.js"></script>
-      <script src="https://gnikitin.ru/dashboard/remoteEntry.js"></script>
-      <script src="https://gnikitin.ru/users/remoteEntry.js"></script>
-      <script src="https://gnikitin.ru/timer/remoteEntry.js"></script>
-      <script src="https://gnikitin.ru/quiz/remoteEntry.js"></script>
+    <script src="https://gnikitin.ru/remoteEntry.js"></script>
+    <script src="https://gnikitin.ru/dashboard/remoteEntry.js"></script>
+    <script src="https://gnikitin.ru/users/remoteEntry.js"></script>
+    <script src="https://gnikitin.ru/timer/remoteEntry.js"></script>
+    <script src="https://gnikitin.ru/quiz/remoteEntry.js"></script>
     <% } else { %>
     <script src="http://localhost:3000/remoteEntry.js"></script>
     <script src="http://localhost:3001/remoteEntry.js"></script>
@@ -17,10 +17,28 @@
     <script src="http://localhost:3003/remoteEntry.js"></script>
     <script src="http://localhost:3004/remoteEntry.js"></script>
     <% } %>
-
-  </head>
-  <title>Nikitin German, Frontend Developer</title>
-  <body>
-    <div id="root"></div>
-  </body>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+</head>
+<title>Nikitin German, Frontend Developer</title>
+<body>
+<div id="root"></div>
+</body>
+<script type="text/javascript">
+    VK.init({
+        apiId: 51865449,
+        onlyWidgets: true
+    });
+</script>
+<script type="text/javascript">
+    VK.Widgets.Group("my_group", {
+        width: "auto",
+        mode: 4,
+        wide: 1,
+        no_cover: 1,
+        height: 640,
+        color1: "FFFFFF",
+        color2: "000000",
+        color3: "5181B8"
+    }, 224603067);
+</script>
 </html>

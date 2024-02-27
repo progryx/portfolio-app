@@ -1,15 +1,7 @@
 @import '~@portfolio-app/styles/src/properties/sizes';
 
-.aboutMe {
-  &__buttons {
-    width: 100%;
-  }
-
-  &__anchor {
-    top: -$base * 70;
-  }
-
-  &__acbCard {
+.acbInfo {
+  &_card {
     display: flex;
 
     img {
@@ -17,7 +9,7 @@
     }
   }
 
-  &__acbButtons {
+  &_buttons {
     display: flex;
     width: 100%;
     height: 100%;
