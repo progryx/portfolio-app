@@ -18,7 +18,7 @@ export const PersonalInfo: React.FC = () => {
     <Grid container justify="center">
       <Grid item xs={avatarBlockWidthRate} md={4}>
         <Box component="div" m={1} p={1}>
-          <Card>
+          <Card variant="outlined">
             <CardMedia
               id={styles.personalInfo__photo}
               image={getAsset('big_avatar.jpg')}

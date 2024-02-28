@@ -4,6 +4,7 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-rational-order',
+    'stylelint-config-standard-scss'
   ],
   plugins: [
     'stylelint-prettier',
@@ -15,6 +16,7 @@ module.exports = {
   rules: {
     'prettier/prettier': [true, prettierConfig],
     'import-notation': 'string',
+    'media-query-no-invalid': null,
     'declaration-block-no-duplicate-properties': true,
     'font-family-no-missing-generic-family-keyword': null,
     'declaration-no-important': true,

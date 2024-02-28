@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Card, CardMedia, Typography } from '@material-ui/core';
+import { Box, Button, Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 import { ContactMailOutlined } from '@material-ui/icons';
 import { GithubIcon } from '@portfolio-app/icons';
 import { contacts } from '@src/constants';
@@ -16,11 +16,11 @@ export function AgileCatBotInfo() {
     <Box m={1} p={1}>
       <Card className={styles.acbInfo_card} variant="outlined">
         <CardMedia component="img" image={getAsset('acb.png')} alt="Agile Cat Bot" />
-        <Box component="div" m={1} p={1} display="flex" flexDirection="column" justifyContent="space-around">
+        <CardContent>
           <Typography variant="body1" color="textSecondary" component="p" align="justify">
             {localedText('agileCatBotInfo')}
           </Typography>
-          <Box component="div" display="flex">
+          <Box component="div" display="flex" className={styles.acbInfo_buttonsWrapper}>
             <Box m={1} width="100%">
               <Button
                 className={styles.acbInfo_buttons}
@@ -46,7 +46,7 @@ export function AgileCatBotInfo() {
               </Button>
             </Box>
           </Box>
-        </Box>
+        </CardContent>
       </Card>
     </Box>
   );
